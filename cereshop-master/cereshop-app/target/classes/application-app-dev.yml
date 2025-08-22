@@ -68,20 +68,7 @@ spring:
         min-idle: 0
   #网站域名
   domain: https://ceres.zkthink.com
-tgjf:
-  baseUrl: https://tgpay.833006.net
-  # secretKey 不建议提交到仓库，可在环境变量或外部 yml 中覆盖
-  secretKey: 66b153f7df3720ed633eaaf844a22f9b
-  account: 53842293114119
-  notifyUrl: https://your.domain/notify
-  returnUrl: https://your.domain/return
-  directPayType:
-  mchid: 10091624326
-  reverse:
-    account:
-    lowOrderId:
-    upOrderId:
-  refundAccountType:
+
 
 #阿里云短信
 aliyun:
