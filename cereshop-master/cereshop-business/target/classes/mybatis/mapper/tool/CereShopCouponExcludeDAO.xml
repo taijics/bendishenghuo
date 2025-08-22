@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.cereshop.business.dao.tool.CereShopCouponExcludeDAO">
+
+  <insert id="insertBatch" parameterType="java.util.List">
+    insert into cere_shop_coupon_exclude (shop_coupon_id, product_id) values
+    <foreach collection="list" item="item" index="index" separator=",">
+      (
+      #{item.shopCouponId},
+      #{item.productId}
+      )
+    </foreach>
+  </insert>
+
+</mapper>

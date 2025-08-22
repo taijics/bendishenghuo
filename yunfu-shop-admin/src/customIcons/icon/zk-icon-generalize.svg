@@ -1,0 +1,12 @@
+<svg id="概括" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: rgba(255,255,255,0);
+      }
+    </style>
+  </defs>
+  <rect id="矩形_2" data-name="矩形 2" class="cls-1" width="24" height="24"/>
+  <rect id="矩形_1" data-name="矩形 1" class="cls-1" width="20" height="20" transform="translate(2 2)"/>
+  <path id="减去_1" data-name="减去 1" d="M16.5,18.666H1.5a1.5,1.5,0,0,1-1.5-1.5V7.177a.991.991,0,0,1,.386-.788l8-6.212a1,1,0,0,1,1.228,0l8,6.212A.991.991,0,0,1,18,7.177v9.99A1.5,1.5,0,0,1,16.5,18.666ZM4.75,14.116a.75.75,0,1,0,0,1.5h8.5a.75.75,0,1,0,0-1.5Z" transform="translate(3 2.634)"/>
+</svg>

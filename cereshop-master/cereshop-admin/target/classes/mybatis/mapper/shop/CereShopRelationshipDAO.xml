@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.cereshop.admin.dao.shop.CereShopRelationshipDAO">
+  <resultMap id="BaseResultMap" type="com.shop.cereshop.commons.domain.shop.CereShopRelationship">
+    <result column="shop_id" jdbcType="BIGINT" property="shopId" />
+    <result column="if_invitation" jdbcType="BIT" property="ifInvitation" />
+    <result column="bind_validity" jdbcType="BIT" property="bindValidity" />
+    <result column="validity_day" jdbcType="INTEGER" property="validityDay" />
+    <result column="if_robbing" jdbcType="BIT" property="ifRobbing" />
+    <result column="robbing_day" jdbcType="INTEGER" property="robbingDay" />
+    <result column="if_distribution_relationship" jdbcType="BIT" property="ifDistributionRelationship" />
+  </resultMap>
+</mapper>

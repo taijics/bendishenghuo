@@ -1,0 +1,161 @@
+/*
+ * Copyright (C) 2017-2021
+ * All rights reserved, Designed By 深圳中科鑫智科技有限公司
+ * Copyright authorization contact 18814114118
+ */
+package com.shop.cereshop.business.controller;
+
+import com.shop.cereshop.business.annotation.NoRepeatSubmit;
+import com.shop.cereshop.business.annotation.NoRepeatWebLog;
+import com.shop.cereshop.business.page.permission.RolePermission;
+import com.shop.cereshop.business.param.permission.RoleDistributionParam;
+import com.shop.cereshop.business.param.role.*;
+import com.shop.cereshop.business.service.permission.CerePlatformPermissionService;
+import com.shop.cereshop.business.service.role.CerePlatformRoleService;
+import com.shop.cereshop.business.utils.ContextUtil;
+import com.shop.cereshop.commons.domain.business.CerePlatformBusiness;
+import com.shop.cereshop.commons.domain.common.Page;
+import com.shop.cereshop.commons.domain.role.CerePlatformRole;
+import com.shop.cereshop.commons.exception.CoBusinessException;
+import com.shop.cereshop.commons.result.Result;
+import com.shop.cereshop.commons.utils.GsonUtil;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
+
+/**
+ * 角色
+ */
+@RestController
+@RequestMapping("role")
+/**
+ * 注解方式生成日志对象，指定topic生成对象类名
+ */
+@Slf4j(topic = "RoleController")
+@Api(value = "角色模块", tags = "角色模块")
+public class RoleController {
+
+    @Autowired
+    private CerePlatformRoleService cerePlatformRoleService;
+
+    @Autowired
+    private CerePlatformPermissionService cerePlatformPermissionService;
+
+    /**
+     * 添加角色
+     * @param param
+     * @return
+     */
+    @PostMapping(value = "save")
+    @NoRepeatSubmit
+    @ApiOperation(value = "添加角色")
+    @NoRepeatWebLog
+    public Result insert(@RequestBody @Validated RoleSaveParam param, HttpServletRequest request) throws CoBusinessException{
+        //获取当前登录账户
+        CerePlatformBusiness user = (CerePlatformBusiness) request.getAttribute("user");
+        param.setShopId(user.getShopId());
+        cerePlatformRoleService.save(param,user);
+        return new Result(user.getUsername(),"添加角色", GsonUtil.objectToGson(param));
+    }
+
+    /**
+     * 修改角色
+     * @param param
+     * @return
+     */
+    @PostMapping(value = "update")
+    @NoRepeatSubmit
+    @ApiOperation(value = "修改角色")
+    @NoRepeatWebLog
+    public Result update(@RequestBody RoleUpdateParam param, HttpServletRequest request) throws CoBusinessException{
+        //获取当前登录账户
+        CerePlatformBusiness user = (CerePlatformBusiness) request.getAttribute("user");
+        cerePlatformRoleService.update(param,user);
+        return new Result(user.getUsername(),"修改角色", GsonUtil.objectToGson(param));
+    }
+
+    /**
+     * 删除角色
+     * @param param
+     * @return
+     */
+    @PostMapping(value = "delete")
+    @NoRepeatSubmit
+    @ApiOperation(value = "删除角色")
+    @NoRepeatWebLog
+    public Result delete(@RequestBody RoleDeleteParam param, HttpServletRequest request) throws CoBusinessException{
+        //获取当前登录账户
+        CerePlatformBusiness user = (CerePlatformBusiness) request.getAttribute("user");
+        ContextUtil.interceptDelete(user);
+        cerePlatformRoleService.delete(param,user);
+        return new Result(user.getUsername(),"删除角色", GsonUtil.objectToGson(param));
+    }
+
+    /**
+     * 角色编辑查询
+     * @return
+     */
+    @PostMapping(value = "getById")
+    @ApiOperation(value = "角色编辑查询")
+    public Result<CerePlatformRole> getById(@RequestBody RoleGetByIdParam role) throws CoBusinessException{
+        CerePlatformRole cerePlatformRole=cerePlatformRoleService.getById(role.getRoleId());
+        return new Result(cerePlatformRole);
+    }
+
+    /**
+     * 角色管理查询
+     * @return
+     */
+    @PostMapping(value = "getAll")
+    @ApiOperation(value = "角色管理查询")
+    public Result<Page<CerePlatformRole>> getAll(@RequestBody RoleGetAllParam param,HttpServletRequest request) throws CoBusinessException{
+        //获取当前登录账户
+        CerePlatformBusiness user = (CerePlatformBusiness) request.getAttribute("user");
+        param.setShopId(user.getShopId());
+        Page page =cerePlatformRoleService.getAll(param);
+        return new Result(page);
+    }
+
+    /**
+     * 菜单分配
+     * @return
+     */
+    @PostMapping(value = "distribution")
+    @NoRepeatSubmit
+    @ApiOperation(value = "菜单分配")
+    @NoRepeatWebLog
+    public Result distribution(@RequestBody RoleDistributionParam param, HttpServletRequest request) throws CoBusinessException{
+        //获取当前登录账户
+        CerePlatformBusiness user = (CerePlatformBusiness) request.getAttribute("user");
+        param.setShopId(ContextUtil.getShopId());
+        interceptUpdate(param);
+        cerePlatformRoleService.distribution(param,user);
+        return new Result(user.getUsername(),"菜单分配", GsonUtil.objectToGson(param));
+    }
+
+    private void interceptUpdate(RoleDistributionParam param) throws CoBusinessException {
+        if (param != null && param.getRoleId() == 131) {
+            throw new CoBusinessException("演示环境不允许修改默认分配的角色信息");
+        }
+    }
+
+    /**
+     * 菜单分配查询
+     * @return
+     */
+    @PostMapping(value = "getRolePermission")
+    @NoRepeatSubmit
+    @ApiOperation(value = "菜单分配查询")
+    public Result<RolePermission> getRolePermission(@RequestBody RoleDistributionParam param,HttpServletRequest request) throws CoBusinessException{
+        //获取当前登录账户
+        CerePlatformBusiness user = (CerePlatformBusiness) request.getAttribute("user");
+        param.setShopId(user.getShopId());
+        RolePermission rolePermission=cerePlatformPermissionService.getRolePermission(param);
+        return new Result(rolePermission);
+    }
+}

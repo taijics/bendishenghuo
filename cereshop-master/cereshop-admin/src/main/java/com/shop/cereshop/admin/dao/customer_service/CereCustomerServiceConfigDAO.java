@@ -1,0 +1,19 @@
+/*
+* Copyright (C) 2017-2021
+* All rights reserved, Designed By 深圳中科鑫智科技有限公司
+* Copyright authorization contact 18814114118
+*/
+package com.shop.cereshop.admin.dao.customer_service;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.shop.cereshop.commons.domain.customer_service.CereCustomerServiceConfig;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+@Mapper
+public interface CereCustomerServiceConfigDAO extends BaseMapper<CereCustomerServiceConfig> {
+
+    int updatePermanentCode(@Param("shopId") Long shopId, @Param("permanentCode") String permanentCode, @Param("authCorpId") String authCorpId);
+
+    int clearAuthInfo(@Param("authCorpId") String authCorpId, @Param("updateTime") String updateTime);
+}

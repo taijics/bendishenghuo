@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.cereshop.business.dao.live.CereLiveProductRelDAO">
+  <resultMap id="BaseResultMap" type="com.shop.cereshop.commons.domain.live.CereLiveProductRel">
+    <id column="live_id" jdbcType="BIGINT" property="liveId" />
+    <id column="live_product_id" jdbcType="BIGINT" property="liveProductId" />
+    <result column="create_time" jdbcType="VARCHAR" property="createTime" />
+    <result column="update_time" jdbcType="VARCHAR" property="updateTime" />
+  </resultMap>
+  <insert id="save">
+    insert into cere_live_product_rel
+    (
+    live_id, live_product_id, create_time, update_time
+    )
+    values
+    (
+	#{liveId}, #{liveProductId}, #{createTime}, #{updateTime}
+    )
+  </insert>
+  <delete id="deleteByLiveIdAndShopId">
+    delete a from cere_live_product_rel a
+    join cere_live b on a.live_id = b.id
+    where b.id = #{liveId} and b.shop_id = #{shopId}
+  </delete>
+  <select id="selectLiveGoodsIdList" resultType="java.lang.Integer">
+    select b.goods_id from cere_live_product_rel a
+    join cere_live_product b on a.live_product_id = b.id
+    where a.live_id = #{liveId} and b.goods_id is not null
+  </select>
+</mapper>

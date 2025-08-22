@@ -1,0 +1,11 @@
+export const terminal = state => state.terminal
+export const activeComponent = state => state.activeComponent
+export const componentsData = state => state.componentsData
+export const typeId = state => state.typeId
+export const couponNum = state => state.couponNum
+export const discountNum = state => state.discountNum
+export const groupNum = state => state.groupNum
+export const newProductNum = state => state.newProductNum
+export const priceNum = state => state.priceNum
+export const productNum = state => state.productNum
+export const spikeNum = state => state.spikeNum

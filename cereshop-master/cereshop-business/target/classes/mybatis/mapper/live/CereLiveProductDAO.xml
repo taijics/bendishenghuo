@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.cereshop.business.dao.live.CereLiveProductDAO">
+  <resultMap id="BaseResultMap" type="com.shop.cereshop.commons.domain.live.CereLiveProduct">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="shop_id" jdbcType="BIGINT" property="shopId" />
+    <result column="product_id" jdbcType="BIGINT" property="productId" />
+    <result column="goods_id" jdbcType="INTEGER" property="goodsId" />
+    <result column="product_name" jdbcType="VARCHAR" property="productName" />
+    <result column="product_image" jdbcType="VARCHAR" property="productImage" />
+    <result column="product_image_media_id" jdbcType="VARCHAR" property="productImageMediaId" />
+    <result column="price_type" jdbcType="INTEGER" property="priceType" />
+    <result column="fixed_price" jdbcType="DECIMAL" property="fixedPrice" />
+    <result column="market_price" jdbcType="DECIMAL" property="marketPrice" />
+    <result column="original_price" jdbcType="DECIMAL" property="originalPrice" />
+    <result column="min_price" jdbcType="DECIMAL" property="minPrice" />
+    <result column="max_price" jdbcType="DECIMAL" property="maxPrice" />
+    <result column="stock_number" jdbcType="INTEGER" property="stockNumber" />
+    <result column="total" jdbcType="INTEGER" property="total" />
+    <result column="state" jdbcType="INTEGER" property="state" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="create_time" jdbcType="VARCHAR" property="createTime" />
+    <result column="update_time" jdbcType="VARCHAR" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, shop_id, product_id, goods_id, product_name, product_image, product_image_media_id, price_type,
+    fixed_price, market_price, original_price, min_price, max_price, stock_number, total, state,
+    remark, create_time, update_time
+  </sql>
+  <update id="updateByPrimaryKey">
+    update cere_live_product
+    set product_id = #{productId},
+    product_name = #{productName},
+    product_image = #{productImage},
+    product_image_media_id = #{productImageMediaId},
+    price_type = #{priceType},
+    fixed_price = #{fixedPrice},
+    market_price = #{marketPrice},
+    original_price = #{originalPrice},
+    min_price = #{minPrice},
+    max_price = #{maxPrice},
+    stock_number = #{stockNumber},
+    total = #{total},
+    state = #{state},
+    update_time = #{updateTime}
+    where id = #{id} and shop_id = #{shopId}
+  </update>
+  <delete id="deleteByIdAndShopId">
+    delete from cere_live_product
+    where id = #{id} and shop_id = #{shopId}
+  </delete>
+  <select id="getAll" parameterType="com.shop.cereshop.business.param.live.LiveProductGetAllParam" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/>
+    from cere_live_product
+    where shop_id = #{shopId}
+    <if test="state != null">
+      and state = #{state}
+    </if>
+    <if test="search != null and search != ''">
+      and product_name like #{search}
+    </if>
+    order by update_time desc
+  </select>
+  <select id="getByIdAndShopId" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/>
+    from cere_live_product
+    where id = #{id} and shop_id = #{shopId}
+  </select>
+  <select id="selectCountByProductIdAndId" resultType="int">
+    select count(id)
+    from cere_live_product
+    where product_id = #{productId}
+    <if test="id != null">
+      and id != #{id}
+    </if>
+  </select>
+</mapper>

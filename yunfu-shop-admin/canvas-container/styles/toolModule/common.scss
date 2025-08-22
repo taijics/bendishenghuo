@@ -1,0 +1,90 @@
+.module-box{
+  margin-bottom: 20px;
+  &__title{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__label{
+    font-size: 14px;
+    // color: #222;
+    font-weight: normal;
+    line-height: 1em;
+    display: block;
+  }
+}
+
+// ::v-deep .el-upload-dragger:hover {
+//  border-color: $mainColor;
+//}
+// ::v-deep .el-upload-dragger .el-upload__text em {
+//  color: $mainColor;
+//}
+// ::v-deep .el-select .el-input.is-focus .el-input__inner {
+//  border-color: $mainColor;
+//}
+// ::v-deep .el-select .el-input__inner:focus {
+//  border-color: $mainColor;
+//}
+// ::v-deep .el-select-dropdown__item.selected {
+//  color: $mainColor;
+//}
+// ::v-deep .ql-container.ql-snow {
+//  border: 1px solid #DCDFE6;
+//}
+// ::v-deep .ql-toolbar.ql-snow {
+//  border: 1px solid #DCDFE6;
+//}
+// ::v-deep .ql-editor.ql-blank::before {
+//  font-style: normal;
+//}
+// ::v-deep .el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+//  background-color: $mainColor;
+//  border-color: $mainColor;
+//}
+// ::v-deep .el-input.is-active .el-input__inner, .el-input__inner:focus {
+//  border-color: $mainColor;
+//}
+// ::v-deep .el-input__inner:focus {
+//  border-color: $mainColor;
+//}
+// ::v-deep .el-textarea__inner:focus {
+//  border-color: $mainColor;
+//}
+// ::v-deep .el-slider__button {
+//  border-color: $mainColor;
+//}
+// ::v-deep .el-tabs__active-bar {
+//  color: $mainColor;
+//}
+// ::v-deep .el-tabs__item.is-active {
+//  color: $mainColor;
+//}
+// ::v-deep .el-tabs__item:hover {
+//  color: $mainColor;
+//}
+// ::v-deep .el-tabs__active-bar {
+//  background: $mainColor;
+//}
+// ::v-deep .el-radio__input.is-checked .el-radio__inner {
+//  border-color: $mainColor;
+//  background: $mainColor;
+//}
+// ::v-deep .el-radio__input.is-checked+.el-radio__label {
+//  color: $mainColor;
+//}
+// ::v-deep .el-slider__bar {
+//  background-color: $mainColor;
+//}
+//
+//.el-dropdown-menu__item:focus, .el-dropdown-menu__item:not(.is-disabled):hover{
+//  background-color: #FFEEE3;
+//  color: $mainColor;
+//}
+//.el-button--primary{
+//  background-color: $mainColor;
+//  border-color: $mainColor;
+//}
+//.el-pagination.is-background .el-pager li:not(.disabled).active{
+//
+//}

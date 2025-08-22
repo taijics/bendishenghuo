@@ -1,0 +1,13 @@
+Android
+	包名：
+	cere.cereshop.mo
+	证书别名：
+	cereshop
+	证书秘钥密码：
+	123456
+	
+IOS
+	appid：
+	cere.cereshop.mo
+	证书秘钥密码：
+	123456

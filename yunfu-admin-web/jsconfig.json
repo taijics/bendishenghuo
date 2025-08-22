@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true, // 允许从没有默认导出的模块中进行默认导入。不影响代码发出，只影响类型检查。
+    "experimentalDecorators": true, // 启用对ES7装饰器的实验性支持
+    "target": "esnext", // 目标语言的版本
+    "useDefineForClassFields": true,
+    "module": "esnext", // 指定生成代码的模板标准
+    "moduleResolution": "node",
+    "strict": true,
+    "removeComments": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true, // 允许导入json文件
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      // 用于设置模块名到基于baseUrl的路径映射
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "src/**/*.vue",
+    "src/**/*.svg",
+  ],
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*"
+  ]
+}

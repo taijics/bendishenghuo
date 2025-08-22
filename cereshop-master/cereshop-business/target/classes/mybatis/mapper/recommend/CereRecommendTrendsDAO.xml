@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.cereshop.business.dao.recommend.CereRecommendTrendsDAO">
+
+    <insert id="saveTrends" parameterType="com.shop.cereshop.commons.domain.recommend.CereRecommendTrends"
+            keyColumn="recommend_id" keyProperty="recommendId"  useGeneratedKeys="true"
+    >
+        insert into cere_recommend_trends
+            (shop_id, recommend_type, file_type, cover, file_url, remark, product_count, create_time, update_time)
+        values (#{shopId}, #{recommendType}, #{fileType}, #{cover},  #{fileUrl}, #{remark}, #{productCount}, now(), now())
+    </insert>
+
+    <update id="updateTrends" parameterType="com.shop.cereshop.commons.domain.recommend.CereRecommendTrends">
+        update cere_recommend_trends
+        <set>
+            <if test="recommendType != null">
+                recommend_type = #{recommendType},
+            </if>
+            <if test="fileType != null">
+                file_type = #{fileType},
+            </if>
+            <if test="cover != null">
+                cover = #{cover},
+            </if>
+            <if test="fileUrl != null">
+                file_url = #{fileUrl},
+            </if>
+            <if test="remark != null">
+                remark = #{remark},
+            </if>
+            <if test="productCount != null">
+                product_count = #{productCount},
+            </if>
+            <if test="updateTime != null">
+                update_time = now(),
+            </if>
+        </set>
+        where recommend_id = #{recommendId}
+    </update>
+
+    <select id="trendsPage" parameterType="com.shop.cereshop.business.param.recommend.RecommendTrendPageParam"
+            resultType="com.shop.cereshop.business.page.recommend.CereRecommendTrendsPage">
+        select * from cere_recommend_trends
+        where shop_id = #{shopId}
+        <if test="recommendType != null">
+            and recommend_type = #{recommendType}
+        </if>
+        <if test="publishStatus != null">
+            and publish_status = #{publishStatus}
+        </if>
+        <if test="fileType != null">
+            and file_type = #{fileType}
+        </if>
+        <if test="publishStartTime != null and publishStartTime != '' and publishEndTime != null and publishEndTime != ''">
+            and publish_time between #{publishStartTime} and #{publishEndTime}
+        </if>
+        order by recommend_id desc
+    </select>
+
+    <select id="getTrendsDetail" resultType="com.shop.cereshop.business.page.recommend.CereRecommendTrendsDetail">
+        select crt.*, cps.shop_name
+        from cere_recommend_trends as crt
+                 inner join cere_platform_shop as cps on crt.shop_id = cps.shop_id
+        where recommend_id = #{recommendId}
+    </select>
+
+
+
+    <delete id="deleteTrends">
+        delete from cere_recommend_trends where recommend_id = #{recommendId}
+    </delete>
+
+    <update id="addCommentCount">
+        update cere_recommend_trends set comment_count = comment_count + 1 where recommend_id = #{recommendId}
+    </update>
+
+    <update id="subCommentCount">
+        update cere_recommend_trends set comment_count = comment_count - #{count}
+        where recommend_id = #{recommendId}
+    </update>
+
+    <update id="audit" parameterType="com.shop.cereshop.commons.domain.recommend.CereRecommendTrends">
+        update cere_recommend_trends
+        <set>
+            <if test="publishStatus != null">
+                publish_status = #{publishStatus},
+            </if>
+            <if test="reviewContent != null and reviewContent != ''">
+                review_content = #{reviewContent},
+            </if>
+            <if test="publishTime != null and publishTime != ''">
+                publish_time = #{publishTime},
+            </if>
+        </set>
+        where recommend_id = #{recommendId}
+    </update>
+
+    <select id="getTrendById" resultType="com.shop.cereshop.commons.domain.recommend.CereRecommendTrends">
+        select * from cere_recommend_trends where recommend_id = #{recommendId}
+    </select>
+
+</mapper>

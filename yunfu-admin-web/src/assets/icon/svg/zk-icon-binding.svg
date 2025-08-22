@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: rgba(255,255,255,0);
+      }
+    </style>
+  </defs>
+  <g id="组合捆绑" transform="translate(-64 -64)">
+    <rect id="矩形_2" data-name="矩形 2" class="cls-1" width="24" height="24" transform="translate(64 64)"/>
+    <rect id="矩形_1" data-name="矩形 1" class="cls-1" width="20" height="20" transform="translate(66 66)"/>
+    <path id="排除_1" data-name="排除 1" d="M-61.5-37h-9A1.5,1.5,0,0,1-72-38.5v-9A1.5,1.5,0,0,1-70.5-49H-66v4.5A1.5,1.5,0,0,0-64.5-43H-60v4.5A1.5,1.5,0,0,1-61.5-37Zm6-6H-60v-4.5A1.5,1.5,0,0,0-61.5-49H-66v-4.5A1.5,1.5,0,0,1-64.5-55h9A1.5,1.5,0,0,1-54-53.5v9A1.5,1.5,0,0,1-55.5-43Z" transform="translate(139 122)"/>
+  </g>
+</svg>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.cereshop.business.dao.recommend.CereRecommendCommentDAO">
+
+    <select id="commentPage" parameterType="com.shop.cereshop.business.param.recommend.RecommendCommentPageParam"
+            resultType="com.shop.cereshop.business.page.recommend.CereRecommendCommentPage">
+        select crc.*, if(crc.user_type = 1, cbu.name, cpb.name) as name,
+        crt.recommend_type, crt.remark, crt.file_type
+        from cere_recommend_comment as crc
+        inner join cere_recommend_trends as crt on crt.recommend_id = crc.recommend_id
+        left join cere_platform_business as cpb on cpb.business_user_id = crc.user_id
+        left join cere_buyer_user as cbu on cbu.buyer_user_id = crc.user_id
+        where crt.shop_id = #{shopId}
+        <if test="recommendCommentId != null">
+            and crc.root_comment_id = #{recommendCommentId}
+        </if>
+        <if test="recommendCommentId == null">
+            and crc.root_comment_id is null
+        </if>
+        <if test="recommendType != null">
+            and crt.recommend_type = #{recommendType}
+        </if>
+        <if test="name != null and name !=''">
+            and (cbu.name like  CONCAT('%',#{name},'%') or cpb.name like  CONCAT('%',#{name},'%'))
+        </if>
+        <if test="fileType != null">
+            and crt.file_type = #{fileType}
+        </if>
+        <if test="startTime != null and startTime != '' and endTime != null and endTime != ''">
+            and crc.create_time between #{startTime} and #{endTime}
+        </if>
+        group by crc.recommend_comment_id
+        order by crc.recommend_comment_id desc
+    </select>
+
+    <delete id="deleteComment">
+        delete from cere_recommend_comment where recommend_comment_id = #{recommendCommentId}
+    </delete>
+
+    <select id="getCommentById" resultType="com.shop.cereshop.commons.domain.recommend.CereRecommendComment">
+        select * from cere_recommend_comment where recommend_comment_id = #{recommendCommentId}
+    </select>
+
+    <update id="addReplyCount">
+        update cere_recommend_comment
+        set reply_count = reply_count + 1 where recommend_comment_id = #{recommendCommentId}
+    </update>
+
+    <update id="subReplyCount">
+        update cere_recommend_comment
+        set reply_count = reply_count - #{count}
+        where recommend_comment_id = #{recommendCommentId}
+    </update>
+
+    <insert id="saveComment" parameterType="com.shop.cereshop.commons.domain.recommend.CereRecommendComment">
+        insert into cere_recommend_comment
+        (user_id, user_type, content, recommend_id, root_comment_id,  parent_comment_id, target_user_id, target_user_type, create_time)
+        values
+        (#{userId}, #{userType}, #{content}, #{recommendId}, #{rootCommentId},  #{parentCommentId}, #{targetUserId}, #{targetUserType}, now())
+    </insert>
+
+    <delete id="deleteCommentByRootCommentId">
+        delete from cere_recommend_comment where root_comment_id = #{rootCommentId} or recommend_comment_id = #{rootCommentId}
+    </delete>
+
+    <delete id="deleteCommentByParentCommentId">
+        delete from cere_recommend_comment where parent_comment_id = #{parentCommentId} or recommend_comment_id = #{parentCommentId}
+    </delete>
+
+</mapper>

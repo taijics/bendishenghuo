@@ -1,0 +1,44 @@
+.el-dialog__header {
+  background-color: #3A68F2;
+}
+
+.el-dialog__title {
+  color: #FFFFFF;
+}
+
+.fenye {
+  padding-top: 20px;
+}
+
+.el-button--primary {
+  color: #FFF;
+  background-color: #3A68F2;
+  border-color: #3A68F2;
+}
+
+.el-radio__input.is-checked .el-radio__inner {
+  border-color: #3A68F2;
+  background: #3A68F2;
+}
+
+.el-tabs__item.is-active {
+  color: #3A68F2;
+}
+
+.el-tabs__active-bar {
+  background-color: #3A68F2;
+}
+.el-radio-button__orig-radio:checked+.el-radio-button__inner {
+  color: #FFF;
+  background-color: #3A68F2;
+  border-color: #3A68F2;
+  -webkit-box-shadow: -1px 0 0 0 #3A68F2;
+  box-shadow: -1px 0 0 0 #3A68F2;
+}
+.el-table td,
+.el-table th {
+  text-align: center !important;
+}
+.promissStyle{
+  margin-left: 10px;
+}

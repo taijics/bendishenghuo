@@ -1,0 +1,53 @@
+{
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --force --host",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:prod": "vite build --mode production",
+    "build:test": "vite build --mode test"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "@tinymce/tinymce-vue": "^4",
+    "@vueup/vue-quill": "^1.0.0-alpha.40",
+    "@vueuse/core": "^10.2.1",
+    "axios": "0.18.1",
+    "core-js": "3.6.5",
+    "echarts": "^5.4.3",
+    "element-plus": "2.3.4",
+    "es6-promise": "^4.2.8",
+    "fs": "^0.0.1-security",
+    "fuse.js": "^6.4.3",
+    "js-cookie": "2.2.0",
+    "jsencrypt": "^3.3.2",
+    "mime": "^3.0.0",
+    "moment": "^2.29.4",
+    "normalize.css": "7.0.0",
+    "nprogress": "0.2.0",
+    "path-browserify": "^1.0.1",
+    "path-to-regexp": "2.4.0",
+    "pinia": "^2.1.1",
+    "screenfull": "^5.0.2",
+    "swiper": "^9.3.2",
+    "tinymce": "^6.6.2",
+    "unplugin-auto-import": "^0.16.0",
+    "unplugin-vue-components": "^0.24.1",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vue": "^3.2.47",
+    "vue-draggable-next": "^2.1.1",
+    "vue-router": "^4.2.0",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.1",
+    "@vitejs/plugin-vue-jsx": "^3.0.1",
+    "eslint": "8.22.0",
+    "eslint-plugin-vue": "^9.12.0",
+    "sass": "^1.62.1",
+    "vite": "^4.3.2"
+  }
+}

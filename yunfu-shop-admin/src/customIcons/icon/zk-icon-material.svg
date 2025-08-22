@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: rgba(255,255,255,0);
+      }
+    </style>
+  </defs>
+  <g id="素材管理" transform="translate(-240 -108)">
+    <rect id="矩形_2" data-name="矩形 2" class="cls-1" width="24" height="24" transform="translate(240 108)"/>
+    <rect id="矩形_1" data-name="矩形 1" class="cls-1" width="20" height="20" transform="translate(242 110)"/>
+    <g id="组_8" data-name="组 8" transform="translate(242.824 91.779)">
+      <path id="减去_25" data-name="减去 25" d="M0,16.053H0V1.494A1.536,1.536,0,0,1,1.572,0H6.9A1.589,1.589,0,0,1,8.21.665L9.567,2.6a.577.577,0,0,0,.477.243h6.328a1.536,1.536,0,0,1,1.572,1.494V6.161H3.828A1.555,1.555,0,0,0,2.3,7.294Z" transform="translate(0.176 19.5)"/>
+      <path id="路径_26" data-name="路径 26" d="M53.045,398.15a.531.531,0,0,0-.52.386l-2.288,8.718a.489.489,0,0,0,.1.438.543.543,0,0,0,.422.2H64.492a.53.53,0,0,0,.519-.386l2.288-8.718a.489.489,0,0,0-.1-.437.541.541,0,0,0-.422-.2Z" transform="translate(-48.356 -370.945)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shop.cereshop.business.dao.live.CereLiveDAO">
+  <resultMap id="BaseResultMap" type="com.shop.cereshop.commons.domain.live.CereLive">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="shop_id" jdbcType="BIGINT" property="shopId" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="anchor_nickname" jdbcType="VARCHAR" property="anchorNickname" />
+    <result column="anchor_wechat" jdbcType="VARCHAR" property="anchorWechat" />
+    <result column="anchor_head_img" jdbcType="VARCHAR" property="anchorHeadImg" />
+    <result column="live_type" jdbcType="INTEGER" property="liveType" />
+    <result column="screen_type" jdbcType="INTEGER" property="screenType" />
+    <result column="close_like" jdbcType="INTEGER" property="closeLike" />
+    <result column="close_goods_shelf" jdbcType="INTEGER" property="closeGoodsShelf" />
+    <result column="close_comment" jdbcType="INTEGER" property="closeComment" />
+    <result column="close_playback" jdbcType="INTEGER" property="closePlayback" />
+    <result column="close_share" jdbcType="INTEGER" property="closeShare" />
+    <result column="close_service" jdbcType="INTEGER" property="closeService" />
+    <result column="close_appointment" jdbcType="INTEGER" property="closeAppointment" />
+    <result column="start_time" jdbcType="VARCHAR" property="startTime" />
+    <result column="end_time" jdbcType="VARCHAR" property="endTime" />
+    <result column="cover_img" jdbcType="VARCHAR" property="coverImg" />
+    <result column="share_img" jdbcType="VARCHAR" property="shareImg" />
+    <result column="feeds_img" jdbcType="VARCHAR" property="feedsImg" />
+    <result column="cover_media_id" jdbcType="VARCHAR" property="coverMediaId"/>
+    <result column="share_media_id" jdbcType="VARCHAR" property="shareMediaId"/>
+    <result column="feeds_media_id" jdbcType="VARCHAR" property="feedsMediaId"/>
+    <result column="room_id" jdbcType="INTEGER" property="roomId"/>
+    <result column="state" jdbcType="INTEGER" property="state" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="create_time" jdbcType="VARCHAR" property="createTime" />
+    <result column="update_time" jdbcType="VARCHAR" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, shop_id, title, anchor_nickname, anchor_wechat, anchor_head_img, live_type, screen_type,
+    close_like, close_goods_shelf, close_comment, close_playback, close_share,
+    close_service, close_appointment, start_time, end_time, cover_img,
+    share_img, feeds_img, cover_media_id, share_media_id, feeds_media_id, room_id,
+    state, remark, create_time, update_time
+  </sql>
+  <delete id="deleteByIdAndShopId">
+    delete from cere_live
+    where id = #{id} and shop_id = #{shopId}
+  </delete>
+  <select id="getAll" parameterType="com.shop.cereshop.business.param.live.LiveGetAllParam" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/>
+    from cere_live
+    where shop_id = #{shopId}
+    <if test="state != null">
+      and state = #{state}
+    </if>
+    <if test="search != null and search != ''">
+      and (
+        id = #{search}
+        or title like concat('%', #{search}, '%')
+        or anchor_nickname like concat('%', #{search}, '%')
+        or anchor_wechat like concat('%', #{search}, '%')
+      )
+    </if>
+    order by update_time desc
+  </select>
+  <select id="getByIdAndShopId" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/>
+    from cere_live
+    where id = #{id} and shop_id = #{shopId}
+  </select>
+  <select id="getLiveProductRelPageByLiveId" resultType="com.shop.cereshop.business.page.live.LiveProductPage">
+    select
+        c.product_id,
+        c.product_name,
+        c.product_image,
+        c.stock_number,
+        c.price_type,
+        c.fixed_price,
+        c.market_price,
+        c.min_price,
+        c.max_price,
+        ifnull(d.sale_number, 0) as sale_number,
+        ifnull(d.sale_amount, 0) as sale_amount
+    from cere_live a
+    join cere_live_product_rel b on b.live_id = a.id
+    join cere_live_product c on b.live_product_id = c.id
+    left join cere_live_sale_stat d on d.product_id = c.product_id
+    where a.id = #{liveId} and a.shop_id = #{shopId}
+  </select>
+</mapper>

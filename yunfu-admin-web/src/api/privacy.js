@@ -1,0 +1,64 @@
+import request from '@/utils/request'
+
+// 发送二次隐私认证验证码
+export function getPrivacyCode(data) {
+  return request({
+    url: 'admin/getPrivacyCode',
+    method: 'post',
+    data,
+  })
+}
+
+// 填写验证码点击确认
+export function verifyPrivacyCode(data) {
+  return request({
+    url: 'admin/verifyPrivacyCode',
+    method: 'post',
+    data,
+  })
+}
+
+// 获取管理员手机号
+export function getAdminPhone(data) {
+  return request({
+    url: 'admin/getAdminPhone',
+    method: 'post',
+    data,
+  })
+}
+
+// 获取旧手机号
+export function getCurrentUserPhone(data) {
+  return request({
+    url: 'platform_user/getCurrentUserPhone',
+    method: 'post',
+    data,
+  })
+}
+
+// 发送修改管理员手机号验证码
+export function getUpdatePhoneCode(data) {
+  return request({
+    url: 'admin/getUpdatePhoneCode',
+    method: 'post',
+    data,
+  })
+}
+
+// 修改管理员手机号
+export function updatePhone(data) {
+  return request({
+    url: 'platform_user/updatePhone',
+    method: 'post',
+    data,
+  })
+}
+
+// 是否24小时内验证了
+export function getPrivacySwitch(data) {
+  return request({
+    url: 'platform_user/getPrivacySwitch',
+    method: 'post',
+    data,
+  })
+}

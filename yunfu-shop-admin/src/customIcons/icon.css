@@ -1,0 +1,275 @@
+
+.zk-icon-activity{
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-activity.svg);
+    background-size: 100% 100%;
+}
+
+.zk-icon-binding {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-binding.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-cash {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-cash.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-client-list {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-client-list.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-commodity-group {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-commodity-group.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-commodity-set {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-commodity-set.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-coupon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-coupon.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-customer-details {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-customer-details.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-discount {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-discount.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-finance {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-finance.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-finance-details {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-finance-details.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-generalize {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-generalize.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-group-booking {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-group-booking.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-label {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-label.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-logistics-set {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-logistics-set.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-management-customer {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-management-customer.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-management-rule {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-management-rule.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-management-server {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-management-server.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-marketing {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-marketing.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-material {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-material.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-member {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-member.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-menu {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-menu.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-operation-plan {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-operation-plan.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-operation-plan2 {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-operation-plan2.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-order {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-order.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-pending-order {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-pending-order.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-Price-bundling {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-Price-bundling.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-sales-order {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-sales-order.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-scene {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-scene.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-seckill {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-seckill.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-segmentation {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-segmentation.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-setting {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-setting.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-shop-decoration {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-shop-decoration.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-spell-group {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-spell-group.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-store {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-store.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-store-set {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-store-set.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-system {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-system.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-user {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-user.svg);
+    background-size: 100% 100%;
+}
+.zk-icon-wallet {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(./icon/zk-icon-wallet.svg);
+    background-size: 100% 100%;
+}

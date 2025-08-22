@@ -1,0 +1,3 @@
+07:53:52.202 [restartedMain] INFO  com.shop.cereshop.app.utils.gust.PayApiTestTool - [logStarting,50] - Starting PayApiTestTool on DESKTOP-9P2FMTG with PID 27152 (started by WIN10 in D:\项目\黎师兄项目\workspace\cereshop-master\cereshop-app)
+07:53:52.204 [restartedMain] INFO  com.shop.cereshop.app.utils.gust.PayApiTestTool - [logStartupProfileInfo,651] - The following profiles are active: app-dev,security
+07:53:52.311 [restartedMain] INFO  com.shop.cereshop.app.utils.gust.PayApiTestTool - [logStarted,59] - Started PayApiTestTool in 0.5 seconds (JVM running for 1.814)

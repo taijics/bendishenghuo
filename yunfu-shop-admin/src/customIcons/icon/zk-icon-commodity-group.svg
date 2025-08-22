@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: rgba(255,255,255,0);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <g id="商品分组" transform="translate(-108 -108)">
+    <rect id="矩形_2" data-name="矩形 2" class="cls-1" width="24" height="24" transform="translate(108 108)"/>
+    <rect id="矩形_1" data-name="矩形 1" class="cls-1" width="20" height="20" transform="translate(110 110)"/>
+    <rect id="矩形_120" data-name="矩形 120" width="16" height="16" rx="1.5" transform="translate(111 113)"/>
+    <path id="路径_37" data-name="路径 37" class="cls-2" d="M1.5,0h13A1.5,1.5,0,0,1,16,1.5v13" transform="translate(113 111)"/>
+  </g>
+</svg>
