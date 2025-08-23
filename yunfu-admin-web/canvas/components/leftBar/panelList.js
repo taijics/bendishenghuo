@@ -291,7 +291,43 @@ export const panelList = [
           showMore: false,
         },
       },
+      {
+        title: '商家列表',
+        iconClass: 'icon-toubu',
+        type: 'merchantList',
+        componentContent: {
+          // 将 style 重命名为 uiStyle，避免被当成 :style 透传到容器上
+          uiStyle: {
+            cardRadius: 12,
+            cardShadow: true,
+            padding: 12,
+            gap: 12,
+            titleSize: 16,
+            titleColor: '#111111',
+            subTextColor: '#666666',
+            statusColor: '#18C46E',
+            tagBg: '#E9F7EE',
+            tagColor: '#18C46E'
+          },
+          show: {
+            businessStatus: true,
+            distance: true,
+            soldCount: true,
+            category: true,
+            address: true,
+            scoreTag: true
+          },
+          dataSource: {
+            type: 'api',
+            api: '/api/merchant/list',
+            method: 'GET',
+            params: { page: 1, size: 10, sort: 'distance' }
+          }
+        }
+      },
+      
     ],
+   
   },
   {
     title: '商品组件',

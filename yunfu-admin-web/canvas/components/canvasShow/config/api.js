@@ -1,7 +1,7 @@
 // 导入api接口模块
 
-// 获取当前环境变量 true => 生产环境 false => 开发环境
-const BASEURL = '/adminapi'
+// 获取当前环境变量 true => 生产环境 false => 开发环境admin
+const BASEURL = '/api'
 // const BASEURL = 'https://ceres.zkthink.com/api' // 移动端
 
 export const api = {

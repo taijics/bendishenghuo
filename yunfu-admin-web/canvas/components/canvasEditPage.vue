@@ -260,6 +260,10 @@ function checkIsNoData (dataList) {
         }
       })
       break
+    case 'merchantList':
+        // 新增：商家列表默认展示（和 notice/text/brandList 等一致）
+        isEmpty = false
+        break
     }
     dataList[i].isEmpty = isEmpty
     // this.$forceUpdate()

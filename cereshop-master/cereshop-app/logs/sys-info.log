@@ -1,3 +1,712 @@
-07:53:52.202 [restartedMain] INFO  com.shop.cereshop.app.utils.gust.PayApiTestTool - [logStarting,50] - Starting PayApiTestTool on DESKTOP-9P2FMTG with PID 27152 (started by WIN10 in D:\项目\黎师兄项目\workspace\cereshop-master\cereshop-app)
-07:53:52.204 [restartedMain] INFO  com.shop.cereshop.app.utils.gust.PayApiTestTool - [logStartupProfileInfo,651] - The following profiles are active: app-dev,security
-07:53:52.311 [restartedMain] INFO  com.shop.cereshop.app.utils.gust.PayApiTestTool - [logStarted,59] - Started PayApiTestTool in 0.5 seconds (JVM running for 1.814)
+06:54:32.455 [restartedMain] INFO  com.shop.cereshop.app.CereshopAppApplication - [logStarting,50] - Starting CereshopAppApplication on DESKTOP-9P2FMTG with PID 7476 (started by WIN10 in D:\项目\黎师兄项目\workspace\cereshop-master\cereshop-app)
+06:54:32.469 [restartedMain] INFO  com.shop.cereshop.app.CereshopAppApplication - [logStartupProfileInfo,651] - The following profiles are active: app-dev,security
+06:54:38.202 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-0.0.0.0-9007"]
+06:54:38.213 [restartedMain] INFO  org.apache.catalina.core.StandardService - [log,173] - Starting service [Tomcat]
+06:54:38.213 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.22]
+06:54:38.385 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+06:54:39.340 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - [init,930] - {dataSource-1,dataSource} inited
+06:54:43.587 [restartedMain] INFO  org.redisson.Version - [logVersion,41] - Redisson 3.22.0
+06:54:44.469 [redisson-netty-2-4] INFO  org.redisson.connection.pool.MasterPubSubConnectionPool - [lambda$createConnection$0,140] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+06:54:44.528 [redisson-netty-2-19] INFO  org.redisson.connection.pool.MasterConnectionPool - [lambda$createConnection$0,140] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+06:54:45.818 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+06:54:45.929 [restartedMain] INFO  org.hibernate.Version - [logVersion,46] - HHH000412: Hibernate Core {5.3.10.Final}
+06:54:45.931 [restartedMain] INFO  org.hibernate.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+06:54:46.144 [restartedMain] INFO  org.hibernate.annotations.common.Version - [<clinit>,49] - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+06:54:46.621 [restartedMain] INFO  org.hibernate.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+06:54:48.532 [restartedMain] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+06:54:48.582 [restartedMain] INFO  com.shop.cereshop.app.redis.config.RedisConfiguration - [cacheManager,94] - 初始化 -> [CacheManager RedisCacheManager Start]
+06:54:48.596 [restartedMain] INFO  com.shop.cereshop.app.redis.config.RedisConfiguration - [errorHandler,125] - 初始化 -> [Redis CacheErrorHandler]
+06:54:48.597 [restartedMain] INFO  com.shop.cereshop.app.redis.config.RedisConfiguration - [redisPoolFactory,162] - JedisPool init successful，host -> [127.0.0.1]；port -> [6379]
+06:54:49.654 [restartedMain] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - [start,160] - Context refreshed
+06:54:49.675 [restartedMain] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - [start,163] - Found 1 custom documentation plugin(s)
+06:54:49.731 [restartedMain] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+06:54:50.264 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getAllUsingGET_1
+06:54:50.267 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_1
+06:54:50.279 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingDELETE_1
+06:54:50.281 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingPOST_1
+06:54:50.301 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingDELETE_2
+06:54:50.301 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingPOST_2
+06:54:50.309 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getAllUsingGET_2
+06:54:50.311 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: selectedUsingPUT_1
+06:54:50.312 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: selectedUsingPOST_1
+06:54:50.319 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingDELETE_3
+06:54:50.320 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingPOST_3
+06:54:50.324 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getAllUsingGET_3
+06:54:50.329 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_2
+06:54:50.332 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getSelectUsingGET_1
+06:54:50.333 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: updateUsingPUT_1
+06:54:50.334 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: updateUsingPOST_1
+06:54:50.373 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: updateUsingPUT_2
+06:54:50.374 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: updateUsingPOST_2
+06:54:50.483 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getAllUsingGET_4
+06:54:50.489 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_3
+06:54:50.543 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getCouponsUsingGET_1
+06:54:50.590 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_4
+06:54:50.679 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: saveUsingPOST_1
+06:54:50.697 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getIndexUsingGET_1
+06:54:50.743 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: checkUsingGET_1
+06:54:50.761 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getSelectUsingGET_2
+06:54:50.796 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getUserUsingGET_1
+06:54:50.802 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: signInUsingPOST_1
+06:54:50.806 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getAllUsingGET_5
+06:54:50.813 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_5
+06:54:50.825 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: cancelUsingPUT_1
+06:54:50.825 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: cancelUsingPOST_1
+06:54:50.833 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingDELETE_4
+06:54:50.833 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingPOST_4
+06:54:50.844 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getAllUsingGET_6
+06:54:50.857 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_6
+06:54:50.875 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getSettlementUsingPOST_1
+06:54:50.895 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: submitUsingPOST_1
+06:54:50.962 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_7
+06:54:50.970 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getProductsUsingGET_1
+06:54:51.003 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: addCommentUsingPOST_1
+06:54:51.026 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: shareUsingGET_1
+06:54:51.043 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getGroupWorksUsingGET_1
+06:54:51.068 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getIndexUsingGET_2
+06:54:51.081 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: addCartUsingPOST_1
+06:54:51.084 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingDELETE_5
+06:54:51.085 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingPOST_5
+06:54:51.110 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: selectedUsingPUT_2
+06:54:51.110 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: selectedUsingPOST_2
+06:54:51.136 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_8
+06:54:51.160 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getIndexUsingGET_3
+06:54:51.164 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getSharePicUsingGET_1
+06:54:51.201 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-0.0.0.0-9007"]
+06:54:51.221 [restartedMain] INFO  com.shop.cereshop.app.CereshopAppApplication - [logStarted,59] - Started CereshopAppApplication in 19.462 seconds (JVM running for 20.457)
+06:55:22.039 [http-nio-0.0.0.0-9007-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+06:55:22.086 [http-nio-0.0.0.0-9007-exec-2] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /canvas/getCanvas
+06:55:22.086 [http-nio-0.0.0.0-9007-exec-4] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /classify/getFirstClassify
+06:55:22.301 [http-nio-0.0.0.0-9007-exec-6] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /canvas/getNotices
+06:55:22.306 [http-nio-0.0.0.0-9007-exec-8] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /canvas/getGroupWorks
+06:55:22.488 [http-nio-0.0.0.0-9007-exec-10] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /advert/selectByCondition
+07:07:18.767 [http-nio-0.0.0.0-9007-exec-4] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /cart/getCart
+07:07:18.930 [http-nio-0.0.0.0-9007-exec-6] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /classify/getFirstClassify
+07:07:18.936 [http-nio-0.0.0.0-9007-exec-8] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /canvas/getCanvas
+07:07:18.966 [http-nio-0.0.0.0-9007-exec-10] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /canvas/getNotices
+07:07:18.969 [http-nio-0.0.0.0-9007-exec-3] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /canvas/getGroupWorks
+07:07:19.443 [http-nio-0.0.0.0-9007-exec-4] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /advert/selectByCondition
+07:07:34.006 [http-nio-0.0.0.0-9007-exec-7] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /canvas/getProducts
+07:07:34.654 [http-nio-0.0.0.0-9007-exec-8] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /canvas/getProducts
+07:07:34.886 [http-nio-0.0.0.0-9007-exec-9] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /canvas/getProducts
+07:07:37.215 [http-nio-0.0.0.0-9007-exec-10] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /cart/getCart
+07:07:37.374 [http-nio-0.0.0.0-9007-exec-4] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /classify/getFirstClassify
+07:07:37.382 [http-nio-0.0.0.0-9007-exec-5] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /canvas/getCanvas
+07:07:37.433 [http-nio-0.0.0.0-9007-exec-6] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /canvas/getNotices
+07:07:37.437 [http-nio-0.0.0.0-9007-exec-9] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /canvas/getGroupWorks
+07:07:37.902 [http-nio-0.0.0.0-9007-exec-10] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /advert/selectByCondition
+07:07:40.265 [http-nio-0.0.0.0-9007-exec-2] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /classify/getFirstClassify
+07:07:40.277 [http-nio-0.0.0.0-9007-exec-5] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /classify/getFirstClassify
+07:07:41.254 [http-nio-0.0.0.0-9007-exec-8] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /recommend/type/getAll
+07:07:41.288 [http-nio-0.0.0.0-9007-exec-9] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /recommend/trend/page
+07:07:42.532 [http-nio-0.0.0.0-9007-exec-10] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /product/getRandomSortProduct
+07:07:43.019 [http-nio-0.0.0.0-9007-exec-2] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /cart/getCart
+07:07:43.068 [http-nio-0.0.0.0-9007-exec-5] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /order/getSettlement
+07:07:44.395 [http-nio-0.0.0.0-9007-exec-8] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /user/getUser
+07:07:46.017 [http-nio-0.0.0.0-9007-exec-6] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /cart/getCart
+07:07:46.026 [http-nio-0.0.0.0-9007-exec-9] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /order/getSettlement
+07:10:15.546 [Thread-1] INFO  com.alibaba.druid.pool.DruidDataSource - [close,1825] - {dataSource-1} closed
+07:10:16.012 [restartedMain] INFO  com.shop.cereshop.app.CereshopAppApplication - [logStarting,50] - Starting CereshopAppApplication on DESKTOP-9P2FMTG with PID 7476 (started by WIN10 in D:\项目\黎师兄项目\workspace\cereshop-master\cereshop-app)
+07:10:16.013 [restartedMain] INFO  com.shop.cereshop.app.CereshopAppApplication - [logStartupProfileInfo,651] - The following profiles are active: app-dev,security
+07:10:17.602 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-0.0.0.0-9007"]
+07:10:17.602 [restartedMain] INFO  org.apache.catalina.core.StandardService - [log,173] - Starting service [Tomcat]
+07:10:17.603 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.22]
+07:10:17.622 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+07:10:17.742 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - [init,930] - {dataSource-2,dataSource} inited
+07:10:17.776 [restartedMain] INFO  org.apache.catalina.loader.WebappClassLoaderBase - [log,175] - Illegal access: this web application instance has been stopped already. Could not load [mybatis/mapper/]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [mybatis/mapper/]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1385)
+	at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1038)
+	at org.springframework.core.io.ClassPathResource.resolveURL(ClassPathResource.java:155)
+	at org.springframework.core.io.ClassPathResource.getURL(ClassPathResource.java:193)
+	at org.springframework.core.io.support.PathMatchingResourcePatternResolver.findPathMatchingResources(PathMatchingResourcePatternResolver.java:498)
+	at org.springframework.core.io.support.PathMatchingResourcePatternResolver.getResources(PathMatchingResourcePatternResolver.java:298)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties.getResources(MybatisPlusProperties.java:203)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties.lambda$resolveMapperLocations$0(MybatisPlusProperties.java:197)
+	at java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:267)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:546)
+	at java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+	at java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:438)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties.resolveMapperLocations(MybatisPlusProperties.java:198)
+	at com.shop.cereshop.app.config.MyBatisPlusConfig.mybatisSqlSessionFactoryBean(MyBatisPlusConfig.java:75)
+	at com.shop.cereshop.app.config.MyBatisPlusConfig$$EnhancerBySpringCGLIB$$8f968314.CGLIB$mybatisSqlSessionFactoryBean$0(<generated>)
+	at com.shop.cereshop.app.config.MyBatisPlusConfig$$EnhancerBySpringCGLIB$$8f968314$$FastClassBySpringCGLIB$$af6dbda.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at com.shop.cereshop.app.config.MyBatisPlusConfig$$EnhancerBySpringCGLIB$$8f968314.mybatisSqlSessionFactoryBean(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:392)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:253)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:227)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5132)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:932)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:456)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:105)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:86)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:416)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:153)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:743)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:390)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1214)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1203)
+	at com.shop.cereshop.app.CereshopAppApplication.main(CereshopAppApplication.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+07:10:17.780 [restartedMain] INFO  org.apache.catalina.core.StandardService - [log,173] - Stopping service [Tomcat]
+07:10:17.783 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - [close,1825] - {dataSource-2} closed
+07:10:30.031 [restartedMain] INFO  com.shop.cereshop.app.CereshopAppApplication - [logStarting,50] - Starting CereshopAppApplication on DESKTOP-9P2FMTG with PID 11916 (started by WIN10 in D:\项目\黎师兄项目\workspace\cereshop-master\cereshop-app)
+07:10:30.034 [restartedMain] INFO  com.shop.cereshop.app.CereshopAppApplication - [logStartupProfileInfo,651] - The following profiles are active: app-dev,security
+07:10:34.304 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-0.0.0.0-9007"]
+07:10:34.314 [restartedMain] INFO  org.apache.catalina.core.StandardService - [log,173] - Starting service [Tomcat]
+07:10:34.314 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.22]
+07:10:34.571 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+07:10:35.462 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - [init,930] - {dataSource-1,dataSource} inited
+07:10:38.917 [restartedMain] INFO  org.redisson.Version - [logVersion,41] - Redisson 3.22.0
+07:10:39.699 [redisson-netty-2-4] INFO  org.redisson.connection.pool.MasterPubSubConnectionPool - [lambda$createConnection$0,140] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+07:10:39.750 [redisson-netty-2-19] INFO  org.redisson.connection.pool.MasterConnectionPool - [lambda$createConnection$0,140] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+07:10:40.569 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+07:10:40.634 [restartedMain] INFO  org.hibernate.Version - [logVersion,46] - HHH000412: Hibernate Core {5.3.10.Final}
+07:10:40.636 [restartedMain] INFO  org.hibernate.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+07:10:40.763 [restartedMain] INFO  org.hibernate.annotations.common.Version - [<clinit>,49] - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+07:10:41.055 [restartedMain] INFO  org.hibernate.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+07:10:42.257 [restartedMain] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+07:10:42.286 [restartedMain] INFO  com.shop.cereshop.app.redis.config.RedisConfiguration - [cacheManager,94] - 初始化 -> [CacheManager RedisCacheManager Start]
+07:10:42.295 [restartedMain] INFO  com.shop.cereshop.app.redis.config.RedisConfiguration - [errorHandler,125] - 初始化 -> [Redis CacheErrorHandler]
+07:10:42.296 [restartedMain] INFO  com.shop.cereshop.app.redis.config.RedisConfiguration - [redisPoolFactory,162] - JedisPool init successful，host -> [127.0.0.1]；port -> [6379]
+07:10:43.082 [restartedMain] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - [start,160] - Context refreshed
+07:10:43.099 [restartedMain] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - [start,163] - Found 1 custom documentation plugin(s)
+07:10:43.135 [restartedMain] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+07:10:43.591 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getAllUsingGET_1
+07:10:43.594 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_1
+07:10:43.605 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingDELETE_1
+07:10:43.606 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingPOST_1
+07:10:43.626 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingDELETE_2
+07:10:43.627 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingPOST_2
+07:10:43.635 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getAllUsingGET_2
+07:10:43.636 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: selectedUsingPUT_1
+07:10:43.637 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: selectedUsingPOST_1
+07:10:43.646 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingDELETE_3
+07:10:43.647 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingPOST_3
+07:10:43.651 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getAllUsingGET_3
+07:10:43.655 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_2
+07:10:43.658 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getSelectUsingGET_1
+07:10:43.659 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: updateUsingPUT_1
+07:10:43.660 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: updateUsingPOST_1
+07:10:43.696 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: updateUsingPUT_2
+07:10:43.696 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: updateUsingPOST_2
+07:10:43.803 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getAllUsingGET_4
+07:10:43.810 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_3
+07:10:43.854 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getCouponsUsingGET_1
+07:10:43.884 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_4
+07:10:43.954 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: saveUsingPOST_1
+07:10:43.966 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getIndexUsingGET_1
+07:10:44.005 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: checkUsingGET_1
+07:10:44.018 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getSelectUsingGET_2
+07:10:44.044 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getUserUsingGET_1
+07:10:44.048 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: signInUsingPOST_1
+07:10:44.050 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getAllUsingGET_5
+07:10:44.055 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_5
+07:10:44.064 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: cancelUsingPUT_1
+07:10:44.065 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: cancelUsingPOST_1
+07:10:44.072 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingDELETE_4
+07:10:44.073 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingPOST_4
+07:10:44.083 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getAllUsingGET_6
+07:10:44.094 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_6
+07:10:44.110 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getSettlementUsingPOST_1
+07:10:44.128 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: submitUsingPOST_1
+07:10:44.173 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_7
+07:10:44.180 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getProductsUsingGET_1
+07:10:44.210 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: addCommentUsingPOST_1
+07:10:44.233 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: shareUsingGET_1
+07:10:44.250 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getGroupWorksUsingGET_1
+07:10:44.271 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getIndexUsingGET_2
+07:10:44.284 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: addCartUsingPOST_1
+07:10:44.286 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingDELETE_5
+07:10:44.287 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingPOST_5
+07:10:44.301 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: selectedUsingPUT_2
+07:10:44.302 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: selectedUsingPOST_2
+07:10:44.326 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_8
+07:10:44.351 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getIndexUsingGET_3
+07:10:44.363 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getSharePicUsingGET_1
+07:10:44.394 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-0.0.0.0-9007"]
+07:10:44.415 [restartedMain] INFO  com.shop.cereshop.app.CereshopAppApplication - [logStarted,59] - Started CereshopAppApplication in 14.841 seconds (JVM running for 15.672)
+07:10:54.673 [http-nio-0.0.0.0-9007-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+07:10:54.718 [http-nio-0.0.0.0-9007-exec-3] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /cart/getCart
+07:10:55.101 [http-nio-0.0.0.0-9007-exec-4] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /order/getSettlement
+07:10:56.988 [http-nio-0.0.0.0-9007-exec-5] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /cart/getCart
+07:10:56.999 [http-nio-0.0.0.0-9007-exec-6] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /order/getSettlement
+07:10:59.794 [http-nio-0.0.0.0-9007-exec-8] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /cart/getCart
+07:10:59.992 [http-nio-0.0.0.0-9007-exec-10] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /product/getRandomSortProduct
+07:11:00.453 [http-nio-0.0.0.0-9007-exec-1] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /cart/getCart
+07:11:00.494 [http-nio-0.0.0.0-9007-exec-2] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /order/getSettlement
+07:14:57.569 [Thread-1] INFO  com.alibaba.druid.pool.DruidDataSource - [close,1825] - {dataSource-1} closed
+07:14:59.243 [restartedMain] INFO  com.shop.cereshop.app.CereshopAppApplication - [logStarting,50] - Starting CereshopAppApplication on DESKTOP-9P2FMTG with PID 17928 (started by WIN10 in D:\项目\黎师兄项目\workspace\cereshop-master\cereshop-app)
+07:14:59.246 [restartedMain] INFO  com.shop.cereshop.app.CereshopAppApplication - [logStartupProfileInfo,651] - The following profiles are active: app-dev,security
+07:15:03.885 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-0.0.0.0-9007"]
+07:15:03.894 [restartedMain] INFO  org.apache.catalina.core.StandardService - [log,173] - Starting service [Tomcat]
+07:15:03.894 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.22]
+07:15:04.043 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+07:15:04.866 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - [init,930] - {dataSource-1,dataSource} inited
+07:15:08.312 [restartedMain] INFO  org.redisson.Version - [logVersion,41] - Redisson 3.22.0
+07:15:09.075 [redisson-netty-2-4] INFO  org.redisson.connection.pool.MasterPubSubConnectionPool - [lambda$createConnection$0,140] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+07:15:09.132 [redisson-netty-2-19] INFO  org.redisson.connection.pool.MasterConnectionPool - [lambda$createConnection$0,140] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+07:15:09.986 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+07:15:10.052 [restartedMain] INFO  org.hibernate.Version - [logVersion,46] - HHH000412: Hibernate Core {5.3.10.Final}
+07:15:10.054 [restartedMain] INFO  org.hibernate.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+07:15:10.185 [restartedMain] INFO  org.hibernate.annotations.common.Version - [<clinit>,49] - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+07:15:10.478 [restartedMain] INFO  org.hibernate.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+07:15:11.648 [restartedMain] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+07:15:11.679 [restartedMain] INFO  com.shop.cereshop.app.redis.config.RedisConfiguration - [cacheManager,94] - 初始化 -> [CacheManager RedisCacheManager Start]
+07:15:11.689 [restartedMain] INFO  com.shop.cereshop.app.redis.config.RedisConfiguration - [errorHandler,125] - 初始化 -> [Redis CacheErrorHandler]
+07:15:11.690 [restartedMain] INFO  com.shop.cereshop.app.redis.config.RedisConfiguration - [redisPoolFactory,162] - JedisPool init successful，host -> [127.0.0.1]；port -> [6379]
+07:15:12.488 [restartedMain] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - [start,160] - Context refreshed
+07:15:12.504 [restartedMain] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - [start,163] - Found 1 custom documentation plugin(s)
+07:15:12.540 [restartedMain] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+07:15:12.985 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getAllUsingGET_1
+07:15:12.988 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_1
+07:15:12.999 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingDELETE_1
+07:15:13.000 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingPOST_1
+07:15:13.019 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingDELETE_2
+07:15:13.020 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingPOST_2
+07:15:13.026 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getAllUsingGET_2
+07:15:13.028 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: selectedUsingPUT_1
+07:15:13.029 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: selectedUsingPOST_1
+07:15:13.035 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingDELETE_3
+07:15:13.036 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingPOST_3
+07:15:13.039 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getAllUsingGET_3
+07:15:13.042 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_2
+07:15:13.044 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getSelectUsingGET_1
+07:15:13.046 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: updateUsingPUT_1
+07:15:13.046 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: updateUsingPOST_1
+07:15:13.078 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: updateUsingPUT_2
+07:15:13.078 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: updateUsingPOST_2
+07:15:13.174 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getAllUsingGET_4
+07:15:13.180 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_3
+07:15:13.226 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getCouponsUsingGET_1
+07:15:13.266 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_4
+07:15:13.342 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: saveUsingPOST_1
+07:15:13.358 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getIndexUsingGET_1
+07:15:13.397 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: checkUsingGET_1
+07:15:13.417 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getSelectUsingGET_2
+07:15:13.455 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getUserUsingGET_1
+07:15:13.460 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: signInUsingPOST_1
+07:15:13.465 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getAllUsingGET_5
+07:15:13.472 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_5
+07:15:13.484 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: cancelUsingPUT_1
+07:15:13.484 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: cancelUsingPOST_1
+07:15:13.493 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingDELETE_4
+07:15:13.493 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingPOST_4
+07:15:13.504 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getAllUsingGET_6
+07:15:13.517 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_6
+07:15:13.536 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getSettlementUsingPOST_1
+07:15:13.555 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: submitUsingPOST_1
+07:15:13.613 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_7
+07:15:13.623 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getProductsUsingGET_1
+07:15:13.664 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: addCommentUsingPOST_1
+07:15:13.690 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: shareUsingGET_1
+07:15:13.708 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getGroupWorksUsingGET_1
+07:15:13.731 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getIndexUsingGET_2
+07:15:13.745 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: addCartUsingPOST_1
+07:15:13.748 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingDELETE_5
+07:15:13.748 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingPOST_5
+07:15:13.765 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: selectedUsingPUT_2
+07:15:13.766 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: selectedUsingPOST_2
+07:15:13.795 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_8
+07:15:13.817 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getIndexUsingGET_3
+07:15:13.820 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getSharePicUsingGET_1
+07:15:13.859 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-0.0.0.0-9007"]
+07:15:13.880 [restartedMain] INFO  com.shop.cereshop.app.CereshopAppApplication - [logStarted,59] - Started CereshopAppApplication in 15.086 seconds (JVM running for 15.88)
+07:15:29.817 [http-nio-0.0.0.0-9007-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+07:15:29.864 [http-nio-0.0.0.0-9007-exec-4] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /cart/getCart
+07:15:30.261 [http-nio-0.0.0.0-9007-exec-5] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /order/getSettlement
+07:15:31.821 [http-nio-0.0.0.0-9007-exec-1] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /cart/getCart
+07:15:31.948 [http-nio-0.0.0.0-9007-exec-7] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /product/getRandomSortProduct
+07:15:32.399 [http-nio-0.0.0.0-9007-exec-8] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /cart/getCart
+07:15:32.411 [http-nio-0.0.0.0-9007-exec-9] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /order/getSettlement
+07:16:51.654 [http-nio-0.0.0.0-9007-exec-4] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /cart/getCart
+07:16:51.685 [http-nio-0.0.0.0-9007-exec-5] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /order/getSettlement
+07:17:40.049 [Thread-1] INFO  com.alibaba.druid.pool.DruidDataSource - [close,1825] - {dataSource-1} closed
+07:17:41.775 [restartedMain] INFO  com.shop.cereshop.app.CereshopAppApplication - [logStarting,50] - Starting CereshopAppApplication on DESKTOP-9P2FMTG with PID 976 (started by WIN10 in D:\项目\黎师兄项目\workspace\cereshop-master\cereshop-app)
+07:17:41.778 [restartedMain] INFO  com.shop.cereshop.app.CereshopAppApplication - [logStartupProfileInfo,651] - The following profiles are active: app-dev,security
+07:17:46.401 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-0.0.0.0-9007"]
+07:17:46.410 [restartedMain] INFO  org.apache.catalina.core.StandardService - [log,173] - Starting service [Tomcat]
+07:17:46.410 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.22]
+07:17:46.567 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+07:17:47.428 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - [init,930] - {dataSource-1,dataSource} inited
+07:17:50.987 [restartedMain] INFO  org.redisson.Version - [logVersion,41] - Redisson 3.22.0
+07:17:51.739 [redisson-netty-2-4] INFO  org.redisson.connection.pool.MasterPubSubConnectionPool - [lambda$createConnection$0,140] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+07:17:51.818 [redisson-netty-2-19] INFO  org.redisson.connection.pool.MasterConnectionPool - [lambda$createConnection$0,140] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+07:17:52.665 [restartedMain] INFO  org.hibernate.jpa.internal.util.LogHelper - [logPersistenceUnitInformation,31] - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+07:17:52.737 [restartedMain] INFO  org.hibernate.Version - [logVersion,46] - HHH000412: Hibernate Core {5.3.10.Final}
+07:17:52.738 [restartedMain] INFO  org.hibernate.cfg.Environment - [<clinit>,213] - HHH000206: hibernate.properties not found
+07:17:52.938 [restartedMain] INFO  org.hibernate.annotations.common.Version - [<clinit>,49] - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+07:17:53.227 [restartedMain] INFO  org.hibernate.dialect.Dialect - [<init>,157] - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+07:17:54.524 [restartedMain] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - [initHandlerMethods,69] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+07:17:54.558 [restartedMain] INFO  com.shop.cereshop.app.redis.config.RedisConfiguration - [cacheManager,94] - 初始化 -> [CacheManager RedisCacheManager Start]
+07:17:54.568 [restartedMain] INFO  com.shop.cereshop.app.redis.config.RedisConfiguration - [errorHandler,125] - 初始化 -> [Redis CacheErrorHandler]
+07:17:54.569 [restartedMain] INFO  com.shop.cereshop.app.redis.config.RedisConfiguration - [redisPoolFactory,162] - JedisPool init successful，host -> [127.0.0.1]；port -> [6379]
+07:17:55.436 [restartedMain] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - [start,160] - Context refreshed
+07:17:55.452 [restartedMain] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - [start,163] - Found 1 custom documentation plugin(s)
+07:17:55.490 [restartedMain] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - [scan,41] - Scanning for api listing references
+07:17:55.951 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getAllUsingGET_1
+07:17:55.954 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_1
+07:17:55.965 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingDELETE_1
+07:17:55.966 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingPOST_1
+07:17:55.985 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingDELETE_2
+07:17:55.986 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingPOST_2
+07:17:55.992 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getAllUsingGET_2
+07:17:55.993 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: selectedUsingPUT_1
+07:17:55.994 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: selectedUsingPOST_1
+07:17:56.001 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingDELETE_3
+07:17:56.001 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingPOST_3
+07:17:56.004 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getAllUsingGET_3
+07:17:56.007 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_2
+07:17:56.010 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getSelectUsingGET_1
+07:17:56.012 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: updateUsingPUT_1
+07:17:56.013 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: updateUsingPOST_1
+07:17:56.044 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: updateUsingPUT_2
+07:17:56.044 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: updateUsingPOST_2
+07:17:56.152 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getAllUsingGET_4
+07:17:56.158 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_3
+07:17:56.200 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getCouponsUsingGET_1
+07:17:56.243 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_4
+07:17:56.313 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: saveUsingPOST_1
+07:17:56.328 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getIndexUsingGET_1
+07:17:56.373 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: checkUsingGET_1
+07:17:56.389 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getSelectUsingGET_2
+07:17:56.417 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getUserUsingGET_1
+07:17:56.422 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: signInUsingPOST_1
+07:17:56.425 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getAllUsingGET_5
+07:17:56.430 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_5
+07:17:56.441 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: cancelUsingPUT_1
+07:17:56.442 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: cancelUsingPOST_1
+07:17:56.449 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingDELETE_4
+07:17:56.450 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingPOST_4
+07:17:56.458 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getAllUsingGET_6
+07:17:56.468 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_6
+07:17:56.483 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getSettlementUsingPOST_1
+07:17:56.502 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: submitUsingPOST_1
+07:17:56.548 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_7
+07:17:56.555 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getProductsUsingGET_1
+07:17:56.587 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: addCommentUsingPOST_1
+07:17:56.609 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: shareUsingGET_1
+07:17:56.624 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getGroupWorksUsingGET_1
+07:17:56.641 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getIndexUsingGET_2
+07:17:56.654 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: addCartUsingPOST_1
+07:17:56.656 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingDELETE_5
+07:17:56.657 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: deleteUsingPOST_5
+07:17:56.674 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: selectedUsingPUT_2
+07:17:56.674 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: selectedUsingPOST_2
+07:17:56.695 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getByIdUsingGET_8
+07:17:56.716 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getIndexUsingGET_3
+07:17:56.719 [restartedMain] INFO  springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator - [startingWith,40] - Generating unique operation named: getSharePicUsingGET_1
+07:17:56.754 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - [log,173] - Starting ProtocolHandler ["http-nio-0.0.0.0-9007"]
+07:17:56.775 [restartedMain] INFO  com.shop.cereshop.app.CereshopAppApplication - [logStarted,59] - Started CereshopAppApplication in 15.456 seconds (JVM running for 16.248)
+07:18:43.845 [http-nio-0.0.0.0-9007-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - [log,173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+07:18:43.896 [http-nio-0.0.0.0-9007-exec-2] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /cart/getCart
+07:18:44.172 [http-nio-0.0.0.0-9007-exec-3] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /order/getSettlement
+07:18:45.972 [http-nio-0.0.0.0-9007-exec-5] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /cart/getCart
+07:18:46.097 [http-nio-0.0.0.0-9007-exec-7] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /product/getRandomSortProduct
+07:18:46.560 [http-nio-0.0.0.0-9007-exec-8] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /cart/getCart
+07:18:46.587 [http-nio-0.0.0.0-9007-exec-9] INFO  AuthorizationInterceptor - [preHandle,65] - uri: /order/getSettlement
+07:20:58.275 [Thread-1] INFO  com.alibaba.druid.pool.DruidDataSource - [close,1825] - {dataSource-1} closed
+07:20:58.690 [restartedMain] INFO  com.shop.cereshop.app.CereshopAppApplication - [logStarting,50] - Starting CereshopAppApplication on DESKTOP-9P2FMTG with PID 976 (started by WIN10 in D:\项目\黎师兄项目\workspace\cereshop-master\cereshop-app)
+07:20:58.691 [restartedMain] INFO  com.shop.cereshop.app.CereshopAppApplication - [logStartupProfileInfo,651] - The following profiles are active: app-dev,security
+07:21:00.216 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - [log,173] - Initializing ProtocolHandler ["http-nio-0.0.0.0-9007"]
+07:21:00.217 [restartedMain] INFO  org.apache.catalina.core.StandardService - [log,173] - Starting service [Tomcat]
+07:21:00.217 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - [log,173] - Starting Servlet engine: [Apache Tomcat/9.0.22]
+07:21:00.235 [restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - [log,173] - Initializing Spring embedded WebApplicationContext
+07:21:00.331 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - [init,930] - {dataSource-2,dataSource} inited
+07:21:00.365 [restartedMain] INFO  org.apache.catalina.loader.WebappClassLoaderBase - [log,175] - Illegal access: this web application instance has been stopped already. Could not load [mybatis/mapper/]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [mybatis/mapper/]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1385)
+	at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:1038)
+	at org.springframework.core.io.ClassPathResource.resolveURL(ClassPathResource.java:155)
+	at org.springframework.core.io.ClassPathResource.getURL(ClassPathResource.java:193)
+	at org.springframework.core.io.support.PathMatchingResourcePatternResolver.findPathMatchingResources(PathMatchingResourcePatternResolver.java:498)
+	at org.springframework.core.io.support.PathMatchingResourcePatternResolver.getResources(PathMatchingResourcePatternResolver.java:298)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties.getResources(MybatisPlusProperties.java:203)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties.lambda$resolveMapperLocations$0(MybatisPlusProperties.java:197)
+	at java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:267)
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:546)
+	at java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+	at java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:438)
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties.resolveMapperLocations(MybatisPlusProperties.java:198)
+	at com.shop.cereshop.app.config.MyBatisPlusConfig.mybatisSqlSessionFactoryBean(MyBatisPlusConfig.java:75)
+	at com.shop.cereshop.app.config.MyBatisPlusConfig$$EnhancerBySpringCGLIB$$e57bb7f2.CGLIB$mybatisSqlSessionFactoryBean$0(<generated>)
+	at com.shop.cereshop.app.config.MyBatisPlusConfig$$EnhancerBySpringCGLIB$$e57bb7f2$$FastClassBySpringCGLIB$$2c8fed8d.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at com.shop.cereshop.app.config.MyBatisPlusConfig$$EnhancerBySpringCGLIB$$e57bb7f2.mybatisSqlSessionFactoryBean(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1500)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1395)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:392)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:253)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:227)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5132)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:932)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:456)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:105)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:86)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:416)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:153)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:743)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:390)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1214)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1203)
+	at com.shop.cereshop.app.CereshopAppApplication.main(CereshopAppApplication.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+07:21:00.368 [restartedMain] INFO  org.apache.catalina.core.StandardService - [log,173] - Stopping service [Tomcat]
+07:21:00.372 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - [close,1825] - {dataSource-2} closed

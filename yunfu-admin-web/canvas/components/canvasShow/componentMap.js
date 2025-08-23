@@ -22,6 +22,7 @@ export const componentMap = [
     ['discountList', () => import('./basics/discount/app/index.vue')], // 限时折扣
     ['newProduct', () => import('./basics/newProduct/app/index.vue')], // 每日上新
     ['live', () => import('./basics/live/app/index.vue')], // 直播
+    ['merchantList', () => import('./basics/merchantList/app/index.vue')], // 商家列表
     ['shop', () => import('./basics/shop.vue')], // 每日好店
   ]),
   // H5
@@ -47,6 +48,7 @@ export const componentMap = [
     ['discountList', () => import('./basics/discount/app/index.vue')], // 限时折扣
     ['newProduct', () => import('./basics/newProduct/app/index.vue')], // 每日上新
     ['live', () => import('./basics/live/app/index.vue')], // 直播
+    ['merchantList', () => import('./basics/merchantList/app/index.vue')], // 商家列表
     ['shop', () => import('./basics/shop.vue')], // 每日好店
   ]),
   // APP
@@ -71,6 +73,7 @@ export const componentMap = [
     ['priceList', () => import('./basics/price/app/index.vue')], // 定价捆绑
     ['discountList', () => import('./basics/discount/app/index.vue')], // 限时折扣
     ['newProduct', () => import('./basics/newProduct/app/index.vue')], // 每日上新
+    ['merchantList', () => import('./basics/merchantList/app/index.vue')], // 商家列表
     ['live', () => import('./basics/live/app/index.vue')], // 直播
     ['shop', () => import('./basics/shop.vue')], // 每日好店
   ]),
@@ -96,6 +99,7 @@ export const componentMap = [
     ['priceList', () => import('./basics/price/pc/index.vue')], // 定价捆绑
     ['discountList', () => import('./basics/discount/pc/index.vue')], // 限时折扣
     ['newProduct', () => import('./basics/newProduct/app/index.vue')], // 每日上新
+    ['merchantList', () => import('./basics/merchantList/pc/index.vue')], // 商家列表
     ['shop', () => import('./basics/shop.vue')], // 每日好店
   ]),
 ]

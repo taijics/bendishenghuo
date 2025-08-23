@@ -1,17 +1,6 @@
 {
   "groups": [
     {
-      "name": "tgjf",
-      "type": "com.shop.cereshop.app.utils.gust.TgjfConfigProperties",
-      "sourceType": "com.shop.cereshop.app.utils.gust.TgjfConfigProperties"
-    },
-    {
-      "name": "tgjf.reverse",
-      "type": "com.shop.cereshop.app.utils.gust.TgjfConfigProperties$Reverse",
-      "sourceType": "com.shop.cereshop.app.utils.gust.TgjfConfigProperties",
-      "sourceMethod": "public com.shop.cereshop.app.utils.gust.TgjfConfigProperties.Reverse getReverse() "
-    },
-    {
       "name": "thread.pool",
       "type": "com.shop.cereshop.app.redis.config.SysThreadPool",
       "sourceType": "com.shop.cereshop.app.redis.config.SysThreadPool"
@@ -28,61 +17,6 @@
     }
   ],
   "properties": [
-    {
-      "name": "tgjf.account",
-      "type": "java.lang.String",
-      "sourceType": "com.shop.cereshop.app.utils.gust.TgjfConfigProperties"
-    },
-    {
-      "name": "tgjf.base-url",
-      "type": "java.lang.String",
-      "sourceType": "com.shop.cereshop.app.utils.gust.TgjfConfigProperties"
-    },
-    {
-      "name": "tgjf.direct-pay-type",
-      "type": "java.lang.String",
-      "sourceType": "com.shop.cereshop.app.utils.gust.TgjfConfigProperties"
-    },
-    {
-      "name": "tgjf.mchid",
-      "type": "java.lang.String",
-      "sourceType": "com.shop.cereshop.app.utils.gust.TgjfConfigProperties"
-    },
-    {
-      "name": "tgjf.notify-url",
-      "type": "java.lang.String",
-      "sourceType": "com.shop.cereshop.app.utils.gust.TgjfConfigProperties"
-    },
-    {
-      "name": "tgjf.refund-account-type",
-      "type": "java.lang.String",
-      "sourceType": "com.shop.cereshop.app.utils.gust.TgjfConfigProperties"
-    },
-    {
-      "name": "tgjf.return-url",
-      "type": "java.lang.String",
-      "sourceType": "com.shop.cereshop.app.utils.gust.TgjfConfigProperties"
-    },
-    {
-      "name": "tgjf.reverse.account",
-      "type": "java.lang.String",
-      "sourceType": "com.shop.cereshop.app.utils.gust.TgjfConfigProperties$Reverse"
-    },
-    {
-      "name": "tgjf.reverse.low-order-id",
-      "type": "java.lang.String",
-      "sourceType": "com.shop.cereshop.app.utils.gust.TgjfConfigProperties$Reverse"
-    },
-    {
-      "name": "tgjf.reverse.up-order-id",
-      "type": "java.lang.String",
-      "sourceType": "com.shop.cereshop.app.utils.gust.TgjfConfigProperties$Reverse"
-    },
-    {
-      "name": "tgjf.secret-key",
-      "type": "java.lang.String",
-      "sourceType": "com.shop.cereshop.app.utils.gust.TgjfConfigProperties"
-    },
     {
       "name": "thread.pool.core-pool-size",
       "type": "java.lang.Integer",

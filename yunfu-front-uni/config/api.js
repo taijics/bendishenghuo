@@ -1,5 +1,5 @@
-// const DOMAIN_PREFIX = 'http://127.0.0.1:9007'
-const DOMAIN_PREFIX = 'https://ceres.zkthink.com/api'
+ const DOMAIN_PREFIX = 'http://127.0.0.1:9007'
+//const DOMAIN_PREFIX = 'https://ceres.zkthink.com/api'
 
 export const VUE_APP_STATIC_URL = "https://ceres.zkthink.com/" // 静态资源路径
 

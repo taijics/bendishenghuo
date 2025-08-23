@@ -187,13 +187,28 @@
     SELECT sku_name,sku_value,name_code,value_code from cere_sku_name where sku_id=#{skuId}
   </select>
 
-  <select id="findCartByUserId" parameterType="java.lang.Object" resultType="com.shop.cereshop.app.page.cart.ShopCart">
-    SELECT a.shop_id,b.shop_name,a.selected from cere_shop_cart a
-    LEFT JOIN cere_platform_shop b ON a.shop_id=b.shop_id
-    where a.buyer_user_id=#{buyerUserId}
-    GROUP BY a.shop_id
-    ORDER BY a.create_time DESC
-  </select>
+ <select id="findCartByUserId" parameterType="java.lang.Object" resultType="com.shop.cereshop.app.page.cart.ShopCart">
+  SELECT
+    t.shop_id,
+    b.shop_name,
+    t.selected
+  FROM (
+    SELECT
+      a.shop_id,
+      a.selected,
+      a.create_time,
+      ROW_NUMBER() OVER (
+        PARTITION BY a.shop_id
+        ORDER BY a.create_time DESC
+      ) AS rn
+    FROM cere_shop_cart a
+    WHERE a.buyer_user_id = #{buyerUserId}
+  ) t
+  LEFT JOIN cere_platform_shop b ON t.shop_id = b.shop_id
+  WHERE t.rn = 1
+  ORDER BY t.create_time DESC, t.shop_id
+</select>
+
 
   <select id="findProductByShopId" parameterType="java.lang.Object" resultType="com.shop.cereshop.app.page.cart.CartSku">
     SELECT a.product_id,a.shop_id,a.sku_id,a.product_name,d.original_price,d.price,a.image,b.`value`,a.number,
