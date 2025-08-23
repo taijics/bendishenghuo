@@ -110,6 +110,10 @@
                 :terminal="terminal"
                 :typeId="typeId"
                 :shopId="shopId"></com-live>
+      <MerchantList
+        v-else-if="item.type === 'merchantList'"
+        :componentData="item"
+      />
     </div>
   </div>
 </template>
@@ -136,6 +140,7 @@ import comPrice from '@/components/canvasShow/basics/price/app/index.vue'
 import comNewProduct from '@/components/canvasShow/basics/newProduct/app/index.vue'
 import comShop from '@/components/canvasShow/basics/shop.vue'
 import comLive from '@/components/canvasShow/basics/live/app/index.vue'
+import MerchantList from './basics/merchantList.vue'
 
 import { nextTick, onMounted, ref, toRefs } from 'vue';
 const props = defineProps({
