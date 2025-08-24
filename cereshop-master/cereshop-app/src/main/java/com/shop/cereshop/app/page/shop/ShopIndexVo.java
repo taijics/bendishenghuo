@@ -8,7 +8,7 @@ package com.shop.cereshop.app.page.shop;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-	
+
 /**
  * 店铺商品数据
  */
@@ -65,5 +65,11 @@ public class ShopIndexVo {
 	 */
 	@ApiModelProperty(value = "商家地址经纬度")
 	private String gis;
+
+	/**
+	 * 距离（米）
+	 */
+	@ApiModelProperty(value = "距离（米）")
+	private Double distance;
 
 }

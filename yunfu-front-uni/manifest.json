@@ -1,193 +1,193 @@
 {
-    "name" : "cereshop",
-    "appid" : "__UNI__F5FF24E",
-    "description" : "cereshop",
-    "versionName" : "1.7.4",
-    "versionCode" : 174,
-    "transformPx" : false,
-    "app-plus" : {
-        "kernel" : {
-            "ios" : "WKWebview"
+  "name": "cereshop",
+  "appid": "__UNI__F5FF24E",
+  "description": "cereshop",
+  "versionName": "1.7.4",
+  "versionCode": 174,
+  "transformPx": false,
+  "app-plus": {
+    "kernel": {
+      "ios": "WKWebview"
+    },
+    "optimization": {
+      "subPackages": true // 小程序 开启分包优化
+    },
+    "runmode": "liberate", // 开启分包优化后，必须配置资源释放模式
+    "usingComponents": true,
+    "compilerVersion": 3,
+    /* 5+App特有相关 */
+    "modules": {
+      "Webview-x5": {},
+      "VideoPlayer": {},
+      "Payment": {},
+      "Share": {}
+    },
+    "compatible": {
+      "ignoreVersion": true //true表示忽略版本检查提示框，HBuilderX1.9.0及以上版本支持
+    },
+    /* 模块配置 */
+    "distribute": {
+      /* 应用发布信息 */
+      "android": {
+        /* android打包配置 */
+        "permissions": [
+          "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+          "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+          "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+          "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+          "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+          "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+          "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+          "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+          "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+          "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+        ]
+      },
+      "ios": {
+        "idfa": false,
+        "dSYMs": false
+      },
+      /* ios打包配置 */
+      "sdkConfigs": {
+        "ad": {},
+        "payment": {
+          "weixin": {
+            "__platform__": ["ios", "android"],
+            "appid": "wxec665c74647095aa",
+            "UniversalLinks": "https://ceres.zkthink.com/apple-app-site-association"
+          }
         },
-        "optimization" : {
-            "subPackages" : true // 小程序 开启分包优化
+        "maps": {},
+        "speech": {
+          "ifly": {}
         },
-        "runmode" : "liberate", // 开启分包优化后，必须配置资源释放模式
-        "usingComponents" : true,
-        "compilerVersion" : 3,
-        /* 5+App特有相关 */
-        "modules" : {
-            "Webview-x5" : {},
-            "VideoPlayer" : {},
-            "Payment" : {},
-            "Share" : {}
+        "geolocation": {},
+        "share": {
+          "weixin": {
+            "appid": "wxec665c74647095aa",
+            "UniversalLinks": "https://ceres.zkthink.com/apple-app-site-association"
+          }
         },
-        "compatible" : {
-            "ignoreVersion" : true //true表示忽略版本检查提示框，HBuilderX1.9.0及以上版本支持
+        "push": {}
+      },
+      "splashscreen": {
+        "androidStyle": "common",
+        "iosStyle": "common"
+      },
+      "icons": {
+        "android": {
+          "hdpi": "unpackage/res/icons/72x72.png",
+          "xhdpi": "unpackage/res/icons/96x96.png",
+          "xxhdpi": "unpackage/res/icons/144x144.png",
+          "xxxhdpi": "unpackage/res/icons/192x192.png"
         },
-        /* 模块配置 */
-        "distribute" : {
-            /* 应用发布信息 */
-            "android" : {
-                /* android打包配置 */
-                "permissions" : [
-                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
-                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
-                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
-                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
-                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.INTERNET\"/>",
-                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
-                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
-                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
-                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
-                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
-                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
-                    "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
-                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
-                ]
-            },
-            "ios" : {
-                "idfa" : false,
-                "dSYMs" : false
-            },
-            /* ios打包配置 */
-            "sdkConfigs" : {
-                "ad" : {},
-                "payment" : {
-                    "weixin" : {
-                        "__platform__" : [ "ios", "android" ],
-                        "appid" : "wxec665c74647095aa",
-                        "UniversalLinks" : "https://ceres.zkthink.com/apple-app-site-association"
-                    }
-                },
-                "maps" : {},
-                "speech" : {
-                    "ifly" : {}
-                },
-                "geolocation" : {},
-                "share" : {
-                    "weixin" : {
-                        "appid" : "wxec665c74647095aa",
-                        "UniversalLinks" : "https://ceres.zkthink.com/apple-app-site-association"
-                    }
-                },
-                "push" : {}
-            },
-            "splashscreen" : {
-                "androidStyle" : "common",
-                "iosStyle" : "common"
-            },
-            "icons" : {
-                "android" : {
-                    "hdpi" : "unpackage/res/icons/72x72.png",
-                    "xhdpi" : "unpackage/res/icons/96x96.png",
-                    "xxhdpi" : "unpackage/res/icons/144x144.png",
-                    "xxxhdpi" : "unpackage/res/icons/192x192.png"
-                },
-                "ios" : {
-                    "appstore" : "unpackage/res/icons/1024x1024.png",
-                    "ipad" : {
-                        "app" : "unpackage/res/icons/76x76.png",
-                        "app@2x" : "unpackage/res/icons/152x152.png",
-                        "notification" : "unpackage/res/icons/20x20.png",
-                        "notification@2x" : "unpackage/res/icons/40x40.png",
-                        "proapp@2x" : "unpackage/res/icons/167x167.png",
-                        "settings" : "unpackage/res/icons/29x29.png",
-                        "settings@2x" : "unpackage/res/icons/58x58.png",
-                        "spotlight" : "unpackage/res/icons/40x40.png",
-                        "spotlight@2x" : "unpackage/res/icons/80x80.png"
-                    },
-                    "iphone" : {
-                        "app@2x" : "unpackage/res/icons/120x120.png",
-                        "app@3x" : "unpackage/res/icons/180x180.png",
-                        "notification@2x" : "unpackage/res/icons/40x40.png",
-                        "notification@3x" : "unpackage/res/icons/60x60.png",
-                        "settings@2x" : "unpackage/res/icons/58x58.png",
-                        "settings@3x" : "unpackage/res/icons/87x87.png",
-                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
-                        "spotlight@3x" : "unpackage/res/icons/120x120.png"
-                    }
-                }
-            }
+        "ios": {
+          "appstore": "unpackage/res/icons/1024x1024.png",
+          "ipad": {
+            "app": "unpackage/res/icons/76x76.png",
+            "app@2x": "unpackage/res/icons/152x152.png",
+            "notification": "unpackage/res/icons/20x20.png",
+            "notification@2x": "unpackage/res/icons/40x40.png",
+            "proapp@2x": "unpackage/res/icons/167x167.png",
+            "settings": "unpackage/res/icons/29x29.png",
+            "settings@2x": "unpackage/res/icons/58x58.png",
+            "spotlight": "unpackage/res/icons/40x40.png",
+            "spotlight@2x": "unpackage/res/icons/80x80.png"
+          },
+          "iphone": {
+            "app@2x": "unpackage/res/icons/120x120.png",
+            "app@3x": "unpackage/res/icons/180x180.png",
+            "notification@2x": "unpackage/res/icons/40x40.png",
+            "notification@3x": "unpackage/res/icons/60x60.png",
+            "settings@2x": "unpackage/res/icons/58x58.png",
+            "settings@3x": "unpackage/res/icons/87x87.png",
+            "spotlight@2x": "unpackage/res/icons/80x80.png",
+            "spotlight@3x": "unpackage/res/icons/120x120.png"
+          }
         }
+      }
+    }
+  },
+  /* SDK配置 */
+  "quickapp": {},
+  /* 快应用特有相关 */
+  "mp-weixin": {
+    "appid": "wxf0713a10bbae8732",
+    "requiredPrivateInfos": ["chooseLocation", "getLocation", "chooseAddress"],
+    "setting": {
+      "urlCheck": false,
+      "es6": true,
+      "postcss": true,
+      "minified": true
     },
-    /* SDK配置 */
-    "quickapp" : {},
-    /* 快应用特有相关 */
-    "mp-weixin" : {
-        "appid" : "wxf0713a10bbae8732",
-        "requiredPrivateInfos" : [ "chooseLocation", "getLocation", "chooseAddress" ],
-        "setting" : {
-            "urlCheck" : false,
-            "es6" : true,
-            "postcss" : true,
-            "minified" : true
-        },
-        // "usingComponents" : true,
-        "component" : true,
-        "permission" : {},
-        "plugins" : {
-            // 直播
-            "live-player-plugin" : {
-                // "version": "1.3.2", // 注意该直播组件最新版本号，微信开发者工具调试时可获取最新版本号
-                "version" : "latest",
-                "provider" : "wx2b03c6e691cd7370"
-            },
-            // 卡券
-            "sendCoupon" : {
-                "version" : "latest",
-                "provider" : "wxf3f436ba9bd4be7b"
-            }
+    // "usingComponents" : true,
+    "component": true,
+    "permission": {},
+    "plugins": {
+      // 直播
+      "live-player-plugin": {
+        // "version": "1.3.2", // 注意该直播组件最新版本号，微信开发者工具调试时可获取最新版本号
+        "version": "latest",
+        "provider": "wx2b03c6e691cd7370"
+      },
+      // 卡券
+      "sendCoupon": {
+        "version": "latest",
+        "provider": "wxf3f436ba9bd4be7b"
+      }
+    }
+  },
+  "mp-alipay": {
+    "appid": "2021002142606276"
+  },
+  "h5": {
+    "router": {
+      "mode": "hash",
+      "base": "/h5/"
+    },
+    "title": "cereshop",
+    "domain": "http://127.0.0.1:9007",
+    "devServer": {
+      "port": 8080, //端口号
+      "disableHostCheck": true,
+      "proxy": {
+        "/api": {
+          // "target" : "http://3jr3905.qicp.vip:29544", //目标接口域名
+          "target": "http://127.0.0.1:9007", //目标接口域名
+          "changeOrigin": true, //是否跨域
+          "secure": true, // 设置支持https协议的代理
+          "pathRewrite": {
+            "^/api": ""
+          }
         }
+      },
+      "https": false
     },
-    "mp-alipay" : {
-        "appid" : "2021002142606276"
+    "optimization": {
+      "treeShaking": {
+        "enable": false
+      }
     },
-    "h5" : {
-        "router" : {
-            "mode" : "hash",
-            "base" : "/h5/"
-        },
-        "title" : "cereshop",
-        "domain" : "https://ceres.zkthink.com",
-        "devServer" : {
-            "port" : 8080, //端口号
-            "disableHostCheck" : true,
-            "proxy" : {
-                "/api" : {
-                    // "target" : "http://3jr3905.qicp.vip:29544", //目标接口域名
-                    "target" : "https://ceres.zkthink.com/api", //目标接口域名
-                    "changeOrigin" : true, //是否跨域
-                    "secure" : true, // 设置支持https协议的代理
-                    "pathRewrite" : {
-                        "^/api" : ""
-                    }
-                }
-            },
-            "https" : false
-        },
-        "optimization" : {
-            "treeShaking" : {
-                "enable" : false
-            }
-        },
-        "sdkConfigs" : {
-            "maps" : {}
-        }
-    },
-    "mp-baidu" : {
-        "uniStatistics" : {
-            "enable" : false
-        }
-    },
-    "mp-lark" : {
-        "uniStatistics" : {
-            "enable" : true
-        }
-    },
-    "vueVersion" : "3"
+    "sdkConfigs": {
+      "maps": {}
+    }
+  },
+  "mp-baidu": {
+    "uniStatistics": {
+      "enable": false
+    }
+  },
+  "mp-lark": {
+    "uniStatistics": {
+      "enable": true
+    }
+  },
+  "vueVersion": "3"
 }

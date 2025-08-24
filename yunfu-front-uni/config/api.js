@@ -279,6 +279,8 @@ const API = {
 	selectCreditCouponList: WX_API_BASE + '/credit/selectCreditCouponList', // 查询可以积分兑换的优惠券
 	selectCreditRecord: WX_API_BASE + '/credit/selectCreditRecord', // 查询积分记录
 
+//首页商家列表
+	getShopsBySortType: WX_API_BASE + '/shop/getShopsBySortType', //  获取首页广告
 	// 首页广告
 	GetAd: WX_API_BASE + '/advert/selectByCondition', //  获取首页广告
 	adClose: WX_API_BASE + '/advert/closeAdvert', //  关闭首页广告
