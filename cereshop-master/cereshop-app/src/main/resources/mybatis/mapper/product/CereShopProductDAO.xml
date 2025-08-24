@@ -485,17 +485,14 @@
 		NULL and a.image <![CDATA[!= ]]>''
 	</select>
 
-	<select id="findClassifyNumber" parameterType="java.lang.Object"
-		resultType="java.lang.Long">
-		SELECT
-		SUBSTRING_INDEX(SUBSTRING_INDEX(b.classify_level_hierarchy,'/',-1),'/',1)
-		from cere_shop_product a
-		LEFT JOIN cere_product_classify b ON
-		a.classify_id=b.classify_id
-		where a.shop_id=#{shopId}
-		GROUP BY
-		replace(SUBSTRING_INDEX(b.classify_level_hierarchy,'/',2),'/','')
-	</select>
+<select id="findClassifyNumber" parameterType="java.lang.Object" resultType="java.lang.Long">
+  SELECT
+    CAST(ANY_VALUE(SUBSTRING_INDEX(SUBSTRING_INDEX(b.classify_level_hierarchy, '/', -1), '/', 1)) AS UNSIGNED) AS classify_num
+  FROM cere_shop_product a
+  LEFT JOIN cere_product_classify b ON a.classify_id = b.classify_id
+  WHERE a.shop_id = #{shopId}
+  GROUP BY REPLACE(SUBSTRING_INDEX(b.classify_level_hierarchy, '/', 2), '/', '')
+</select>
 
 	<select id="findPayNumber" parameterType="java.lang.Object"
 		resultType="java.lang.Integer">

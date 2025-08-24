@@ -172,30 +172,51 @@
     SELECT classify_id,classify_pid,classify_name,classify_image from cere_product_classify where classify_level=3
   </select>
 
-  <select id="getClaasifyProducts" parameterType="com.shop.cereshop.app.param.classify.ClassifyProductParam" resultType="com.shop.cereshop.app.page.index.Product">
-    SELECT
-        a.shop_id,
-        d.shop_name,
-        d.shop_logo,
+ <select id="getClaasifyProducts" parameterType="com.shop.cereshop.app.param.classify.ClassifyProductParam" resultType="com.shop.cereshop.app.page.index.Product">
+  SELECT
+      a.shop_id,
+      d.shop_name,
+      d.shop_logo,
+      a.product_id,
+      a.product_name,
+      c.product_image AS image,
+      b.sku_id,
+      b.original_price,
+      b.price,
+      0 AS activityType,
+      IFNULL(f.number, 0) + a.fictitious_number AS number
+  FROM cere_shop_product a
+  LEFT JOIN (
+      SELECT
         a.product_id,
-        a.product_name,
-        c.product_image image,
-        b.sku_id,
-        b.original_price,
-        b.price,
-        0 as activityType,
-        ifnull(f.number, 0) + a.fictitious_number as number
-    from cere_shop_product a
-    LEFT JOIN (SELECT a.product_id,a.price,a.sku_id,a.original_price from cere_product_sku a,cere_shop_product b
-        where a.product_id=b.product_id GROUP BY a.product_id) b ON a.product_id=b.product_id
-    LEFT JOIN (SELECT a.product_id,a.product_image from cere_product_image a,cere_shop_product b
-        where a.product_id=b.product_id GROUP BY a.product_id) c ON a.product_id=c.product_id
-    LEFT JOIN cere_platform_shop d ON a.shop_id=d.shop_id
-    LEFT JOIN cere_product_classify e ON a.classify_id=e.classify_id
-    LEFT JOIN (SELECT SUM(number) number,sku_id,order_id from cere_order_product GROUP BY sku_id) f ON b.sku_id=f.sku_id
-    where a.shelve_state=1 and d.state=1
-    <include refid="CommonCondition"/>
-  </select>
+        ANY_VALUE(a.price) AS price,
+        ANY_VALUE(a.sku_id) AS sku_id,
+        ANY_VALUE(a.original_price) AS original_price
+      FROM cere_product_sku a
+      JOIN cere_shop_product b ON a.product_id = b.product_id
+      GROUP BY a.product_id
+  ) b ON a.product_id = b.product_id
+  LEFT JOIN (
+      SELECT
+        a.product_id,
+        ANY_VALUE(a.product_image) AS product_image
+      FROM cere_product_image a
+      JOIN cere_shop_product b ON a.product_id = b.product_id
+      GROUP BY a.product_id
+  ) c ON a.product_id = c.product_id
+  LEFT JOIN cere_platform_shop d ON a.shop_id = d.shop_id
+  LEFT JOIN cere_product_classify e ON a.classify_id = e.classify_id
+  LEFT JOIN (
+      SELECT
+        SUM(number) AS number,
+        sku_id
+      FROM cere_order_product
+      GROUP BY sku_id
+  ) f ON b.sku_id = f.sku_id
+  WHERE a.shelve_state = 1
+    AND d.state = 1
+  <include refid="CommonCondition"/>
+</select>
 
   <select id="getClassifyProducts2" parameterType="com.shop.cereshop.app.param.classify.ClassifyProductParam"
           resultType="com.shop.cereshop.app.page.index.Product">

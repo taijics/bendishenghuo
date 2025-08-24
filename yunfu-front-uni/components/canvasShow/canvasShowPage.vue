@@ -80,6 +80,17 @@
                  :terminal="terminal"
                  :typeId="typeId"
                  :shopId="shopId"></com-group>
+
+         <!-- 新增：商家列表，挂 ref 以便父组件调用 -->
+           <com-merchant-list
+             v-if="item.type==='merchantList'"
+             ref="merchantPage"
+             :componentData="item"
+             :terminal="terminal"
+             :typeId="typeId"
+             :shopId="shopId"
+           ></com-merchant-list>
+
       <com-discount v-if="item.type==='discountList'"
                     :componentContent="item.componentContent"
                     :terminal="terminal"
@@ -110,10 +121,7 @@
                 :terminal="terminal"
                 :typeId="typeId"
                 :shopId="shopId"></com-live>
-      <MerchantList
-        v-else-if="item.type === 'merchantList'"
-        :componentData="item"
-      />
+                
     </div>
   </div>
 </template>
@@ -140,7 +148,7 @@ import comPrice from '@/components/canvasShow/basics/price/app/index.vue'
 import comNewProduct from '@/components/canvasShow/basics/newProduct/app/index.vue'
 import comShop from '@/components/canvasShow/basics/shop.vue'
 import comLive from '@/components/canvasShow/basics/live/app/index.vue'
-import MerchantList from './basics/merchantList.vue'
+import comMerchantList from '@/components/canvasShow/basics/merchantList.vue' // 新增
 
 import { nextTick, onMounted, ref, toRefs } from 'vue';
 const props = defineProps({

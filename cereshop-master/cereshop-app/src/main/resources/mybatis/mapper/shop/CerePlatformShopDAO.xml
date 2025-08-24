@@ -273,84 +273,116 @@
     ORDER BY SUM(c.number) DESC LIMIT 1
   </select>
 
-  <select id="findPayUsers" parameterType="java.lang.Object" resultType="java.lang.Integer">
+<!--   <select id="findPayUsers" parameterType="java.lang.Object" resultType="java.lang.Integer">
     SELECT COUNT(*) users, a.product_id from (SELECT a.order_id,a.product_id,b.buyer_user_id FROM cere_order_product a,cere_shop_order b
     where a.order_id=b.order_id and a.product_id=#{productId} and b.payment_state = 1 GROUP BY b.buyer_user_id) a
-  </select>
+  </select> -->
+  <select id="findPayUsers" parameterType="java.lang.Long" resultType="java.lang.Integer">
+  SELECT COUNT(DISTINCT b.buyer_user_id)
+  FROM cere_order_product a
+  JOIN cere_shop_order b ON a.order_id = b.order_id
+  WHERE a.product_id = #{productId}
+    AND b.payment_state = 1
+</select>
 
   <select id="getShopProducts" parameterType="com.shop.cereshop.app.param.shop.ShopParam" resultType="com.shop.cereshop.app.page.index.Product">
-    SELECT a.shop_id,
-        d.shop_name,
-        a.product_id,
-        a.product_name,
-        c.product_image image,
-        b.sku_id,
-        b.original_price,
-        b.price,
-        ifnull(f.number, 0) + a.fictitious_number as number,
-        a.product_brief,
-        0 as activityType
-    from cere_shop_product a
-    LEFT JOIN (SELECT a.product_id,a.price,a.sku_id,a.original_price from cere_product_sku a,cere_shop_product b
-    where a.product_id=b.product_id GROUP BY a.product_id) b ON a.product_id=b.product_id
-    LEFT JOIN (SELECT a.product_id,a.product_image from cere_product_image a,cere_shop_product b
-    where a.product_id=b.product_id GROUP BY a.product_id) c ON a.product_id=c.product_id
-    LEFT JOIN cere_platform_shop d ON a.shop_id=d.shop_id
-    LEFT JOIN cere_product_classify e ON a.classify_id=e.classify_id
-    LEFT JOIN cere_shop_group sg ON a.shop_group_id = sg.shop_group_id
-    LEFT JOIN (SELECT SUM(a.number) number,a.sku_id,a.order_id from cere_order_product a,
-    cere_shop_order b where a.order_id=b.order_id and b.state in (2,3,4) GROUP BY sku_id) f ON b.sku_id=f.sku_id
-    where a.shop_id=#{shopId} and a.shelve_state=1 and d.state=1
-    <if test="search!=null and search!=''">
-      and a.product_name like concat('%',#{search},'%')
-    </if>
-    <if test="classifyId!=null">
-      <choose>
-        <when test="classifyLevel != null">
-          <if test="classifyLevel == 1">
-            and a.classify_id1 = #{classifyId}
-          </if>
-          <if test="classifyLevel == 2">
-            and a.classify_id2 = #{classifyId}
-          </if>
-          <if test="classifyLevel == 3">
-            and a.classify_id3 = #{classifyId}
-          </if>
-        </when>
-        <otherwise>
-          and (
-            a.classify_id1 = #{classifyId}
-            OR a.classify_id2 = #{classifyId}
-            OR a.classify_id3 = #{classifyId}
-          )
-        </otherwise>
-      </choose>
-    </if>
-    <if test="groupId != null">
-      and sg.shop_group_id = #{groupId}
-    </if>
-    <if test="minMoney!=null">
-      and price&gt;=#{minMoney}
-    </if>
-    <if test="maxMoney!=null">
-      and price&lt;=#{maxMoney}
-    </if>
+  SELECT
+    a.shop_id,
+    d.shop_name,
+    a.product_id,
+    a.product_name,
+    c.product_image AS image,
+    b.sku_id,
+    b.original_price,
+    b.price,
+    IFNULL(f.number, 0) + a.fictitious_number AS number,
+    a.product_brief,
+    0 AS activityType
+  FROM cere_shop_product a
+  LEFT JOIN (
+    SELECT
+      a.product_id,
+      ANY_VALUE(a.price) AS price,
+      ANY_VALUE(a.sku_id) AS sku_id,
+      ANY_VALUE(a.original_price) AS original_price
+    FROM cere_product_sku a
+    JOIN cere_shop_product b ON a.product_id = b.product_id
     GROUP BY a.product_id
-    ORDER BY
-    <if test='type=="1"'>
-      price,
-    </if>
-    <if test='type=="2"'>
-      price DESC,
-    </if>
-    <if test='volume=="1"'>
-      f.number,
-    </if>
-    <if test='volume=="2"'>
-      f.number DESC,
-    </if>
-    a.update_time DESC,a.create_time DESC
-  </select>
+  ) b ON a.product_id = b.product_id
+  LEFT JOIN (
+    SELECT
+      a.product_id,
+      ANY_VALUE(a.product_image) AS product_image
+    FROM cere_product_image a
+    JOIN cere_shop_product b ON a.product_id = b.product_id
+    GROUP BY a.product_id
+  ) c ON a.product_id = c.product_id
+  LEFT JOIN cere_platform_shop d ON a.shop_id = d.shop_id
+  LEFT JOIN cere_product_classify e ON a.classify_id = e.classify_id
+  LEFT JOIN cere_shop_group sg ON a.shop_group_id = sg.shop_group_id
+  LEFT JOIN (
+    SELECT
+      SUM(a.number) AS number,
+      a.sku_id
+    FROM cere_order_product a
+    JOIN cere_shop_order b ON a.order_id = b.order_id
+    WHERE b.state IN (2,3,4)
+    GROUP BY a.sku_id
+  ) f ON b.sku_id = f.sku_id
+  WHERE a.shop_id = #{shopId}
+    AND a.shelve_state = 1
+    AND d.state = 1
+  <if test="search != null and search != ''">
+    AND a.product_name LIKE CONCAT('%', #{search}, '%')
+  </if>
+  <if test="classifyId != null">
+    <choose>
+      <when test="classifyLevel != null">
+        <if test="classifyLevel == 1">
+          AND a.classify_id1 = #{classifyId}
+        </if>
+        <if test="classifyLevel == 2">
+          AND a.classify_id2 = #{classifyId}
+        </if>
+        <if test="classifyLevel == 3">
+          AND a.classify_id3 = #{classifyId}
+        </if>
+      </when>
+      <otherwise>
+        AND (
+          a.classify_id1 = #{classifyId}
+          OR a.classify_id2 = #{classifyId}
+          OR a.classify_id3 = #{classifyId}
+        )
+      </otherwise>
+    </choose>
+  </if>
+  <if test="groupId != null">
+    AND sg.shop_group_id = #{groupId}
+  </if>
+  <if test="minMoney != null">
+    AND b.price &gt;= #{minMoney}
+  </if>
+  <if test="maxMoney != null">
+    AND b.price &lt;= #{maxMoney}
+  </if>
+  GROUP BY a.product_id
+  ORDER BY
+  <if test='type == "1"'>
+    b.price,
+  </if>
+  <if test='type == "2"'>
+    b.price DESC,
+  </if>
+  <if test='volume == "1"'>
+    f.number,
+  </if>
+  <if test='volume == "2"'>
+    f.number DESC,
+  </if>
+  a.update_time DESC,
+  a.create_time DESC
+</select>
 
   <select id="getExtensionProduct" parameterType="com.shop.cereshop.app.param.shop.ShopParam" resultType="com.shop.cereshop.app.page.index.Product">
     SELECT a.shop_id,

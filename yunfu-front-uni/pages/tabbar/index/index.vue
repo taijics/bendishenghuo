@@ -46,7 +46,7 @@
 
 <script setup>
 import { ref, nextTick } from 'vue';
-import { onLoad, onReachBottom, onShow } from '@dcloudio/uni-app';
+import { onLoad, onReachBottom, onShow, onPullDownRefresh } from '@dcloudio/uni-app';
 import tuiModal from '@/components/modal/modal.vue';
 import AdWindow from '@/components/adWindow';
 import API from '@/config/api';
@@ -91,6 +91,20 @@ onShow(() => {
     topHeight.value = menuButtonInfo.top;
     height.value = menuButtonInfo.height;
     // #endif
+});
+
+onPullDownRefresh(() => {
+    try {
+        if (activeTab.value === 0) {
+            // 首页画布：让画布内部组件自己刷新（canvasShowPage 已暴露 refreshList）
+            canvasPageRef.value?.refreshList?.();
+        } else {
+            // 分类页：沿用你已有的重置逻辑
+            HandleCleanActiveTabProduct();
+        }
+    } finally {
+        uni.stopPullDownRefresh();
+    }
 });
 
 // 读取画布
@@ -153,6 +167,14 @@ function HandleLoadMoreProduct() {
         if (lastComponent && lastComponent.type === 'productList' && lastComponent.componentContent.openBottomLoad) {
             console.log('商品组件触底加载', canvasPageRef.value);
             canvasPageRef.value && canvasPageRef.value.loadMore();
+        }
+          const isProductCanLoad =
+                lastComponent.type === 'productList' &&
+                lastComponent.componentContent?.openBottomLoad;
+        const isMerchant = lastComponent.type === 'merchantList';
+
+        if (isProductCanLoad || isMerchant) {
+            canvasPageRef.value?.loadMore?.();
         }
     }
 }

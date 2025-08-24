@@ -163,21 +163,34 @@
     SELECT comment_id,add_time from cere_shop_comment where order_id=#{orderId} LIMIT 1
   </select>
 
-  <select id="findByProductId" parameterType="java.lang.Object" resultType="com.shop.cereshop.app.page.product.BuyerComment">
-    SELECT a.comment_id,a.shop_name,IF(b.wechat_name IS NULL,b.`name`,b.wechat_name) `name`,
-    a.`comment`,a.add_comment,a.image,a.add_image,a.create_time,b.head_image,d.sku_value value,
-    f.likes from cere_shop_comment a
-    LEFT JOIN cere_buyer_user b ON a.buyer_user_id=b.buyer_user_id
-    LEFT JOIN cere_order_product c ON a.order_id=c.order_id and a.sku_id=c.sku_id
-    LEFT JOIN cere_order_product_attribute d ON c.order_product_id=d.order_product_id
-    LEFT JOIN cere_buyer_comment_like e ON a.buyer_user_id=e.buyer_user_id
-    LEFT JOIN (SELECT COUNT(buyer_user_id) likes,comment_id FROM cere_buyer_comment_like where if_like=1
-    GROUP BY comment_id) f ON a.comment_id=f.comment_id
-    where a.product_id=#{productId} and a.state=0
-    GROUP BY a.comment_id
-    ORDER BY a.create_time desc
-  </select>
-
+<select id="findByProductId" parameterType="java.lang.Object" resultType="com.shop.cereshop.app.page.product.BuyerComment">
+  SELECT
+    a.comment_id,
+    ANY_VALUE(a.shop_name) AS shop_name,
+    ANY_VALUE(IF(b.wechat_name IS NULL, b.`name`, b.wechat_name)) AS `name`,
+    ANY_VALUE(a.`comment`) AS `comment`,
+    ANY_VALUE(a.add_comment) AS add_comment,
+    ANY_VALUE(a.image) AS image,
+    ANY_VALUE(a.add_image) AS add_image,
+    MAX(a.create_time) AS create_time,
+    ANY_VALUE(b.head_image) AS head_image,
+    GROUP_CONCAT(DISTINCT d.sku_value ORDER BY d.sku_value) AS `value`,
+    IFNULL(f.likes, 0) AS likes
+  FROM cere_shop_comment a
+  LEFT JOIN cere_buyer_user b ON a.buyer_user_id = b.buyer_user_id
+  LEFT JOIN cere_order_product c ON a.order_id = c.order_id AND a.sku_id = c.sku_id
+  LEFT JOIN cere_order_product_attribute d ON c.order_product_id = d.order_product_id
+  LEFT JOIN (
+    SELECT COUNT(buyer_user_id) AS likes, comment_id
+    FROM cere_buyer_comment_like
+    WHERE if_like = 1
+    GROUP BY comment_id
+  ) f ON a.comment_id = f.comment_id
+  WHERE a.product_id = #{productId}
+    AND a.state = 0
+  GROUP BY a.comment_id
+  ORDER BY MAX(a.create_time) DESC
+</select>
   <select id="findShop" parameterType="java.lang.Object" resultType="com.shop.cereshop.commons.domain.shop.CereShopComment">
     SELECT a.product_id,b.shop_id,b.shop_name,b.shop_code from cere_shop_product a
     LEFT JOIN cere_platform_shop b ON a.shop_id=b.shop_id
