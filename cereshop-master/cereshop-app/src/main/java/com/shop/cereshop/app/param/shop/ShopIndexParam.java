@@ -27,4 +27,26 @@ public class ShopIndexParam extends PageParam {
 	@ApiModelProperty(value = "搜索类别")
 	private Integer type;
 
+	/**
+	 * 排序方式: distance, recommend, sales
+	 */
+	@ApiModelProperty(value = "排序方式")
+	private String sort;
+
+	/**
+	 * 页面大小，兼容 size 参数
+	 */
+	@ApiModelProperty(value = "页面大小")
+	private Integer size;
+
+	// Compatibility methods for frontend parameters
+	public Integer getSize() {
+		return this.size != null ? this.size : this.getPageSize();
+	}
+
+	public void setSize(Integer size) {
+		this.size = size;
+		this.setPageSize(size);
+	}
+
 }

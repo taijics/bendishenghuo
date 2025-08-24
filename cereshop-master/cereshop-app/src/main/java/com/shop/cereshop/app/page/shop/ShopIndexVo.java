@@ -66,4 +66,33 @@ public class ShopIndexVo {
 	@ApiModelProperty(value = "商家地址经纬度")
 	private String gis;
 
+	/**
+	 * 月销量
+	 */
+	@ApiModelProperty(value = "月销量")
+	private Integer monthlySales;
+
+	/**
+	 * 距离(km)
+	 */
+	@ApiModelProperty(value = "距离")
+	private Double distance;
+
+	// Convenience getters for frontend compatibility
+	public Integer getSoldCount() {
+		return this.number;
+	}
+
+	public Integer getStatus() {
+		return this.businessStatus;
+	}
+
+	public Double getIntegralRate() {
+		return this.integrationRatio;
+	}
+
+	public String getCategoryName() {
+		return this.typeName;
+	}
+
 }

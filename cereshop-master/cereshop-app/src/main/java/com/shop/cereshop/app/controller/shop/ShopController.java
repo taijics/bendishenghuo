@@ -113,7 +113,7 @@ public class ShopController {
 			// 根据token查询用户信息
 			user = cereBuyerUserService.findByToken(token);
 		}
-		Page page = cerePlatformShopservice.getShops(param, user);
+		Page<ShopIndexVo> page = cerePlatformShopservice.getShops(param, user);
 		return new Result(page, CoReturnFormat.SUCCESS);
 	}
 
