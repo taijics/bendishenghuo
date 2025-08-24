@@ -26,7 +26,7 @@
                     </view>
                 </view>
                 <!-- #endif -->
-                <category-list @tabChange="tabChange"></category-list>
+       <!--         <category-list @tabChange="tabChange"></category-list> -->
             </view>
         </u-sticky>
         <canvas-page ref="canvasPageRef" :componentsData="componentsData" v-if="activeTab == 0" :terminal="terminal" :typeId="1"></canvas-page>
