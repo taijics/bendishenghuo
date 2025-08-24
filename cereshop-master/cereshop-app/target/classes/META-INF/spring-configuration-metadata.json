@@ -21,29 +21,34 @@
       "name": "thread.pool.core-pool-size",
       "type": "java.lang.Integer",
       "description": "表示线程池核心线程，正常情况下开启的线程数量",
-      "sourceType": "com.shop.cereshop.app.redis.config.SysThreadPool"
+      "sourceType": "com.shop.cereshop.app.redis.config.SysThreadPool",
+      "defaultValue": 50
     },
     {
       "name": "thread.pool.keep-alive-seconds",
       "type": "java.lang.Integer",
-      "sourceType": "com.shop.cereshop.app.redis.config.SysThreadPool"
+      "sourceType": "com.shop.cereshop.app.redis.config.SysThreadPool",
+      "defaultValue": 60
     },
     {
       "name": "thread.pool.max-pool-size",
       "type": "java.lang.Integer",
       "description": "如果queueCapacity存满了，还有任务就会启动更多的线程， 直到线程数达到maxPoolSize。如果还有任务，则根据拒绝策略进行处理",
-      "sourceType": "com.shop.cereshop.app.redis.config.SysThreadPool"
+      "sourceType": "com.shop.cereshop.app.redis.config.SysThreadPool",
+      "defaultValue": 100
     },
     {
       "name": "thread.pool.queue-capacity",
       "type": "java.lang.Integer",
       "description": "当核心线程都在跑任务，还有多余的任务会存到此处",
-      "sourceType": "com.shop.cereshop.app.redis.config.SysThreadPool"
+      "sourceType": "com.shop.cereshop.app.redis.config.SysThreadPool",
+      "defaultValue": 100
     },
     {
       "name": "thread.pool.thread-name-prefix",
       "type": "java.lang.String",
-      "sourceType": "com.shop.cereshop.app.redis.config.SysThreadPool"
+      "sourceType": "com.shop.cereshop.app.redis.config.SysThreadPool",
+      "defaultValue": "filink-thread-pool-sys"
     },
     {
       "name": "weixin.api-v3-key",

@@ -12,6 +12,8 @@ import com.shop.cereshop.app.page.shop.PlatformShop;
 import com.shop.cereshop.app.page.shop.Shop;
 import com.shop.cereshop.app.page.shop.ShopClassify;
 import com.shop.cereshop.app.page.shop.ShopIndex;
+import com.shop.cereshop.app.page.shop.ShopIndexVo;
+import com.shop.cereshop.app.param.shop.ShopIndexParam;
 import com.shop.cereshop.app.param.shop.ShopParam;
 import com.shop.cereshop.app.param.shop.ShopPosterParam;
 import com.shop.cereshop.commons.domain.buyer.CereBuyerUser;
@@ -41,6 +43,8 @@ public interface CerePlatformShopservice {
     List<ShopBanner> getShopBanner(Long shopId) throws CoBusinessException;
 
     Page getShops(ShopParam param, CereBuyerUser user) throws CoBusinessException;
+
+    Page<ShopIndexVo> getShops(ShopIndexParam param, CereBuyerUser user) throws CoBusinessException;
 
     void updateState(CerePlatformShop cerePlatformShop) throws CoBusinessException;
 

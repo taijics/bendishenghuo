@@ -16,6 +16,7 @@ import com.shop.cereshop.app.page.index.RecommendShop;
 import com.shop.cereshop.app.page.product.ProductCoupon;
 import com.shop.cereshop.app.page.settlement.SettlementShop;
 import com.shop.cereshop.app.page.shop.*;
+import com.shop.cereshop.app.param.shop.ShopIndexParam;
 import com.shop.cereshop.app.param.shop.ShopParam;
 import com.shop.cereshop.app.param.shop.ShopPosterParam;
 import com.shop.cereshop.app.service.buyer.CereBuyerShopCouponService;
@@ -36,6 +37,7 @@ import com.shop.cereshop.commons.domain.shop.CereShopReturn;
 import com.shop.cereshop.commons.exception.CoBusinessException;
 import com.shop.cereshop.commons.upload.strategy.FileStrategy;
 import com.shop.cereshop.commons.utils.EmptyUtils;
+import com.shop.cereshop.commons.utils.PageUtil;
 import com.shop.cereshop.commons.utils.QRCodeUtil;
 import com.shop.cereshop.commons.utils.TimeUtils;
 import jodd.util.StringUtil;
@@ -56,8 +58,11 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
@@ -219,6 +224,91 @@ public class CerePlatformShopserviceImpl implements CerePlatformShopservice {
         PageInfo<SettlementShop> pageInfo=new PageInfo<>(list);
         Page page=new Page(pageInfo.getList(),pageInfo.getTotal());
         return page;
+    }
+
+    @Override
+    public Page<ShopIndexVo> getShops(ShopIndexParam param, CereBuyerUser user) throws CoBusinessException {
+        // Generate mock data for 27 merchants
+        List<ShopIndexVo> mockShops = generateMockShops();
+        
+        // Apply sorting based on sort parameter
+        applySorting(mockShops, param.getSort());
+        
+        // Apply pagination
+        int page = param.getPage() != null ? param.getPage() : 1;
+        int size = param.getSize() != null ? param.getSize() : 10;
+        
+        PageInfo<ShopIndexVo> pageInfo = PageUtil.getPageData(page, size, mockShops);
+        return new Page<>(pageInfo.getList(), pageInfo.getTotal());
+    }
+
+    /**
+     * Generate 27 mock shop data for homepage merchant list
+     */
+    private List<ShopIndexVo> generateMockShops() {
+        List<ShopIndexVo> shops = new ArrayList<>();
+        Random random = new Random();
+        
+        String[] shopNames = {
+            "星巴克咖啡", "麦当劳", "肯德基", "必胜客", "海底捞火锅", "西贝莜面村", "外婆家", "真功夫",
+            "沙县小吃", "黄焖鸡米饭", "兰州拉面", "桂林米粉", "重庆小面", "成都串串香", "烤肉季",
+            "全聚德", "东来顺", "大董烤鸭", "老北京炸酱面", "庆丰包子铺", "和合谷", "吉野家",
+            "味千拉面", "一兰拉面", "汉堡王", "德克士", "华莱士"
+        };
+        
+        String[] categories = {"快餐", "火锅", "烧烤", "中餐", "西餐", "日料", "韩料", "川菜", "粤菜"};
+        String[] addresses = {
+            "北京市朝阳区三里屯太古里", "北京市海淀区中关村大街", "北京市东城区王府井大街",
+            "上海市浦东新区陆家嘴", "上海市黄浦区南京东路", "广州市天河区珠江新城",
+            "深圳市南山区科技园", "杭州市西湖区文三路", "成都市锦江区春熙路"
+        };
+        
+        for (int i = 0; i < 27; i++) {
+            ShopIndexVo shop = new ShopIndexVo();
+            shop.setShopId((long) (i + 1));
+            shop.setShopName(shopNames[i]);
+            shop.setShopLogo("https://via.placeholder.com/150x150.png?text=Shop" + (i + 1));
+            shop.setNumber(random.nextInt(1000) + 50); // 已售件数 50-1049
+            shop.setBusinessStatus(random.nextInt(10) < 8 ? 1 : 0); // 80% 营业中
+            shop.setIntegrationRatio(0.01 + random.nextDouble() * 0.09); // 积分比例 0.01-0.1
+            shop.setTypeName(categories[random.nextInt(categories.length)]);
+            shop.setAddress(addresses[random.nextInt(addresses.length)]);
+            shop.setGis("{\"lat\":" + (39.9 + random.nextDouble() * 0.2) + ",\"lng\":" + (116.3 + random.nextDouble() * 0.4) + "}");
+            shop.setMonthlySales(random.nextInt(500) + 100); // 月销量 100-599
+            shop.setDistance(random.nextDouble() * 10); // 距离 0-10km
+            
+            shops.add(shop);
+        }
+        
+        return shops;
+    }
+    
+    /**
+     * Apply sorting to shop list based on sort parameter
+     */
+    private void applySorting(List<ShopIndexVo> shops, String sort) {
+        if (sort == null) {
+            return;
+        }
+        
+        switch (sort.toLowerCase()) {
+            case "distance":
+                shops.sort(Comparator.comparing(ShopIndexVo::getDistance, Comparator.nullsLast(Comparator.naturalOrder())));
+                break;
+            case "sales":
+                shops.sort(Comparator.comparing(ShopIndexVo::getMonthlySales, Comparator.nullsLast(Comparator.reverseOrder())));
+                break;
+            case "recommend":
+                // For recommend, we'll sort by a combination of factors (sales + status)
+                shops.sort(Comparator
+                    .comparing((ShopIndexVo s) -> s.getBusinessStatus(), Comparator.nullsLast(Comparator.reverseOrder()))
+                    .thenComparing(s -> s.getMonthlySales(), Comparator.nullsLast(Comparator.reverseOrder())));
+                break;
+            default:
+                // Default to distance sorting
+                shops.sort(Comparator.comparing(ShopIndexVo::getDistance, Comparator.nullsLast(Comparator.naturalOrder())));
+                break;
+        }
     }
 
     @Override
