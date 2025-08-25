@@ -21,5 +21,6 @@ export const componentMap = new Map([
   ['newProduct', () => import('./shopComp/newProductTool.vue')], // 会员专区
   ['live', () => import('./shopComp/liveTool.vue')], // 直播
   ['shop', () => import('./shopComp/shopTool.vue')], // 每日好店
+  ['gridMenu', () => import('./BasicsComp/gridMenu.vue')],
 ])
 export default componentMap

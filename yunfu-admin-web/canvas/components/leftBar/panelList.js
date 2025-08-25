@@ -1,10 +1,8 @@
 // 导入api接口模块
-export const panelList = [
-  {
+export const panelList = [{
     title: '基础组件',
     type: 1,
-    classList: [
-      {
+    classList: [{
         title: '商城头部',
         iconClass: 'icon-dianputoubu',
         type: 'header',
@@ -26,17 +24,15 @@ export const panelList = [
         type: 'banner',
         componentContent: {
           height: 500,
-          bannerData: [
-            {
-              bannerUrl: '',
-              linkObj: {
-                selectValue: '',
-                selectName: '',
-                typeText: '',
-                url: '',
-              },
+          bannerData: [{
+            bannerUrl: '',
+            linkObj: {
+              selectValue: '',
+              selectName: '',
+              typeText: '',
+              url: '',
             },
-          ],
+          }, ],
         },
       },
       {
@@ -76,8 +72,7 @@ export const panelList = [
         type: 'brandList',
         componentContent: {
           title: '品牌列表',
-          imgList: [
-            {
+          imgList: [{
               title: '标题一',
               imgData: '',
               linkObj: {
@@ -146,8 +141,7 @@ export const panelList = [
         componentContent: {
           title: '标题',
           textAlign: 'left',
-          imgTextData: [
-            {
+          imgTextData: [{
               linkObj: {
                 selectValue: '',
                 selectName: '',
@@ -191,8 +185,7 @@ export const panelList = [
         iconClass: 'icon-tuwendaohang',
         type: 'imageTextNav',
         componentContent: {
-          imgTextData: [
-            {
+          imgTextData: [{
               linkObj: {
                 selectValue: '',
                 selectName: '',
@@ -226,6 +219,114 @@ export const panelList = [
         },
       },
       {
+        title: '九宫格菜单',
+        iconClass: 'icon-tuwendaohang', // 或其它icon
+        type: 'gridMenu',
+        componentContent: {
+          gridMenuData: [{
+              img: '',
+              text: '餐饮美食',
+              linkObj: {
+                selectValue: '',
+                selectName: '',
+                typeText: '',
+                url: ''
+              }
+            },
+            {
+              img: '',
+              text: '休闲玩乐',
+              linkObj: {
+                selectValue: '',
+                selectName: '',
+                typeText: '',
+                url: ''
+              }
+            },
+            {
+              img: '',
+              text: '酒店民宿',
+              linkObj: {
+                selectValue: '',
+                selectName: '',
+                typeText: '',
+                url: ''
+              }
+            },
+            {
+              img: '',
+              text: '运动健身',
+              linkObj: {
+                selectValue: '',
+                selectName: '',
+                typeText: '',
+                url: ''
+              }
+            },
+            {
+              img: '',
+              text: '看病买药',
+              linkObj: {
+                selectValue: '',
+                selectName: '',
+                typeText: '',
+                url: ''
+              }
+            },
+            {
+              img: '',
+              text: '按摩足疗',
+              linkObj: {
+                selectValue: '',
+                selectName: '',
+                typeText: '',
+                url: ''
+              }
+            },
+            {
+              img: '',
+              text: '超市便利',
+              linkObj: {
+                selectValue: '',
+                selectName: '',
+                typeText: '',
+                url: ''
+              }
+            },
+            {
+              img: '',
+              text: '宠物天地',
+              linkObj: {
+                selectValue: '',
+                selectName: '',
+                typeText: '',
+                url: ''
+              }
+            },
+            {
+              img: '',
+              text: '亲子乐园',
+              linkObj: {
+                selectValue: '',
+                selectName: '',
+                typeText: '',
+                url: ''
+              }
+            },
+            {
+              img: '',
+              text: '更多优选',
+              linkObj: {
+                selectValue: '',
+                selectName: '',
+                typeText: '',
+                url: ''
+              }
+            }
+          ]
+        }
+      },
+      {
         title: '铺助分割',
         iconClass: 'icon-fuzhufenge',
         type: 'assistDiv',
@@ -247,8 +348,7 @@ export const panelList = [
           averageBoxData: [], // 记录格子的激活状态
           imgBoxActive: 0, // 记录框的位置
           elementNum: 1, // 生成格子数量
-          imgData: [
-            {
+          imgData: [{
               src: '',
               linkObj: {
                 selectValue: '',
@@ -275,8 +375,7 @@ export const panelList = [
         type: 'videoBox',
         componentContent: {
           title: '标题',
-          videoUrl:
-            'http://cereshop.oss-cn-shenzhen.aliyuncs.com/0000/2020/05/432bb17e-536c-4762-a699-b3f5a2642742.mp4',
+          videoUrl: 'http://cereshop.oss-cn-shenzhen.aliyuncs.com/0000/2020/05/432bb17e-536c-4762-a699-b3f5a2642742.mp4',
           mainBody: '描述',
           coverImg: '',
         },
@@ -321,19 +420,22 @@ export const panelList = [
             type: 'api',
             api: '/api/merchant/list',
             method: 'GET',
-            params: { page: 1, size: 10, sort: 'distance' }
+            params: {
+              page: 1,
+              size: 10,
+              sort: 'distance'
+            }
           }
         }
       },
-      
+
     ],
-   
+
   },
   {
     title: '商品组件',
     type: 1,
-    classList: [
-      {
+    classList: [{
         title: '商品列表',
         iconClass: 'icon-shangpin',
         type: 'productList',
@@ -351,7 +453,7 @@ export const panelList = [
           arrangeType: '多行多列', // 布局方式
           showMore: false, // 显示隐藏更多
           styleValue: '1', // 查看更多样式
-          openBottomLoad:false,// 是否开启触底加载
+          openBottomLoad: false, // 是否开启触底加载
           linkObj: {
             selectValue: '',
             selectName: '',
@@ -366,8 +468,7 @@ export const panelList = [
         type: 'categoryList',
         componentContent: {
           title: '类别列表',
-          categoryData: [
-            {
+          categoryData: [{
               id: 1,
               selClassData: [],
               img: '',
@@ -396,8 +497,7 @@ export const panelList = [
   {
     title: '店铺组件',
     type: 2,
-    classList: [
-      {
+    classList: [{
         title: '拼团专区',
         iconClass: 'icon-pintuan1',
         type: 'groupList',
@@ -511,17 +611,15 @@ export const panelList = [
         type: 'shop',
         onlyApp: true, // 只在app显示
         componentContent: {
-          imgTextData: [
-            {
-              linkObj: {
-                selectValue: '',
-                selectName: '',
-                typeText: '',
-                url: '',
-              },
-              img: '',
+          imgTextData: [{
+            linkObj: {
+              selectValue: '',
+              selectName: '',
+              typeText: '',
+              url: '',
             },
-          ],
+            img: '',
+          }, ],
         },
       },
     ],

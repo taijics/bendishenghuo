@@ -138,6 +138,10 @@ const props = defineProps({
         label: '商品详情',
       },
       {
+        value: '/shopSearch',
+        label: '店辅列表',
+      },
+      {
         value: '/notice',
         label: '公告',
       },
