@@ -17,14 +17,14 @@
                 </view>
                 <!-- #endif -->
                 <!-- #ifdef H5 || APP-PLUS -->
-                <view class="header">
+                <!-- <view class="header">
                     <view class="topBox topWap">
                         <image class="logo" :src="`${VUE_APP_STATIC_URL}static/assets/img/logo.png`" mode="widthFix"></image>
                         <view class="search-btn" @click="searchPro">
                             <image class="search-icon" :src="`${VUE_APP_STATIC_URL}static/img/search.png`" mode="widthFix"></image>
                         </view>
                     </view>
-                </view>
+                </view> -->
                 <!-- #endif -->
        <!--         <category-list @tabChange="tabChange"></category-list> -->
             </view>

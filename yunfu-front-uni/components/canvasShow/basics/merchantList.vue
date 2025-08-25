@@ -197,9 +197,8 @@ export default {
                 const params = Object.assign({}, this.dataSource.params || {}, baseParams);
                 const res = await request(this.dataSource.api, params, this.dataSource.method);
 
-                const data = res.data || res || {};
-                const list = data.list || data.records || data.rows || data.items || data.result || [];
-                const total = data.total != null ? data.total : data.count != null ? data.count : Array.isArray(list) ? list.length : 0;
+                const list = res.data.list;
+                const total = res.data.total;
 
                 const normalized = (list || []).map((it) => this.normalizeMerchant(it));
                 this.merchants = reset ? normalized : this.merchants.concat(normalized);
@@ -233,14 +232,18 @@ export default {
 
             return {
                 id: raw.id || raw.merchantId || raw.shopId,
-                name: raw.name || raw.title || raw.shopName || raw.shopName,
-                logo: raw.logo || raw.avatar || raw.image || raw.shopLogo,
+                name: raw.shopName,
+                logo:  raw.shopLogo,
                 cover: raw.cover || raw.bgImage,
                 categoryName: raw.categoryName || raw.category || raw.typeName || (raw.categories && raw.categories.join(' / ')),
                 address: raw.address || raw.addr || raw.location,
                 distance: raw.distance,
                 status: raw.status != null ? raw.status : raw.businessStatus,
                 isOpen: raw.isOpen,
+                msg:raw.msg,
+                payType:raw.payType,
+                imgs:raw.imgs,
+                businessTime:raw.businessTime,
                 soldCount: raw.soldCount != null ? raw.soldCount : raw.monthlySales != null ? raw.monthlySales : raw.number,
                 monthlySales: raw.monthlySales != null ? raw.monthlySales : raw.soldCount != null ? raw.soldCount : raw.number,
                 rebateText: rate == null ? '' : this.formatRebate(rate)
@@ -264,10 +267,11 @@ export default {
             return open ? '营业中' : '休息中';
         },
         handleClick(m) {
+            
             if (m && m.id) {
-                try {
-                    uni.navigateTo({ url: `/pages/merchant/detail/index?id=${m.id}` });
-                } catch (e) {}
+                uni.navigateTo({
+                    url: '/pages_category_page1/store/shopDetail?shop=' + encodeURIComponent(JSON.stringify(m))
+                });
             }
         }
     }
@@ -320,7 +324,7 @@ export default {
 }
 .cover {
     width: 220rpx;
-    height: 170rpx;
+    height: 200rpx;
     border-radius: 16rpx;
     background: #f2f3f5;
     flex-shrink: 0;
@@ -379,7 +383,7 @@ export default {
     font-size: 22rpx;
     color: #ffffff;
     background: #18c46e;
-    border-radius: 12rpx;
+    border-radius: 12rpx 0 0 12rpx;
     padding: 2rpx 8rpx;
     margin-right: 8rpx;
 }
@@ -390,9 +394,7 @@ export default {
 }
 
 /* 类目仅一行显示 */
-.meta-row {
-    margin-top: 10rpx;
-}
+
 .category {
     font-size: 26rpx;
     color: #666666;
@@ -415,9 +417,7 @@ export default {
 }
 
 /* 地址 */
-.addr-row {
-    margin-top: 10rpx;
-}
+
 .addr {
     font-size: 26rpx;
     color: #666666;
